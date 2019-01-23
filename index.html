@@ -58,10 +58,10 @@
 			<p id="nav-mode"></p>
 			
 			<div class="photo-container">
-				<img title="1" src="./photos/1.jpg">
-				<img title="2" src="./photos/2.jpg">
-				<img title="3" src="./photos/3.jpg">
-				<img title="4" src="./photos/4.jpg">
+				<img title="a bridge somewhere" src="./photos/1.jpg">
+				<img title="a ceiling somewhere" src="./photos/2.jpg">
+				<img title="a murder of crows... I mean plague doctors" src="./photos/3.jpg">
+				<img title="a painting" src="./photos/4.jpg">
 			</div>
 			
 		</div>
@@ -75,8 +75,10 @@
 <!-- Photo browsing window -->
 <div id="photo-container-expand">
 	<div id="photo-title"></div>
-	<a href="javascript:void(0);" title="minimize" onclick="photoExpand(null)">X</a>
-	<img id="photo-frame" onclick="photoExpand(null)">
+	<img id="photo-frame">
+	<a class="nav-arrow nav-arrow-left" href="javascript:void(0);" title="Previous Photo" onclick="photoExpand(null)"><div>&lt;</div></a>
+	<a class="nav-arrow nav-arrow-right" href="javascript:void(0);" title="Next Photo" onclick="photoExpand(null)"><div>&gt;</div></a>
+	<a class="nav-icon" href="javascript:void(0);" title="Minimize" onclick="photoExpand(null)">X</a>
 </div>
 
 </body>
