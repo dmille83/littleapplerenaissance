@@ -1,3 +1,5 @@
+var arr_photos = [];
+
 function navMenu() {
 	var x = document.getElementById("nav-menu");
 	if (x.style.display === "table-cell") {
@@ -19,6 +21,7 @@ window.onload = (function(){
 	
 	var elements = document.getElementsByClassName("photo-container")[0].getElementsByTagName('img');
 	for (var i = 0; i < elements.length; i++) {
+		//arr_photos[i] = elements[i];
 		elements[i].onclick = function(){
 			photoExpand(this);
 		}

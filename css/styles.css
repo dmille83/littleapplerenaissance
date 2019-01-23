@@ -45,7 +45,7 @@ div#banner img {
 	color: black;
 }
 
-a.nav-icon, #photo-expand a {
+a.nav-icon, #photo-container-expand a {
 	background-color: black;
 	color: white;
 	font-size: 17px;

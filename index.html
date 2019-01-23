@@ -14,7 +14,8 @@
 <!-- Simulate a smartphone / tablet -->
 <div class="col-container">
 
-	<!-- Top nav-menu Menu -->
+	<!-- Mobile: top nav-menu menu -->
+	<!-- Desktop: column 1 left -->
 	<div id="nav-menu" class="col-mobile">
 		
 		<a href="#home">Home</a>
@@ -37,13 +38,18 @@
 	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()">
 		<i class="fa fa-bars"></i>
 	</a>
-
+	<!-- End: column 1 left -->
+	
+	<!-- Mobile: page below -->
+	<!-- Desktop: column 2 right -->
 	<div class="content-container">
 		
+		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
 			<a href="javascript:void(0);" onclick="navMenu()"><img src="./img/banner.png"></a>
 		</div>
 		
+		<!-- Page content -->
 		<div id="nav-content" class="col-mobile">
 			
 			<h3>Little Apple Renaissance Festival</h3>
@@ -58,17 +64,19 @@
 				<img title="4" src="./photos/4.jpg">
 			</div>
 			
-			<div id="photo-container-expand">
-				<div id="photo-title"></div>
-				<a href="#" title="minimize" onclick="photoExpand(null)">X</a>
-				<img id="photo-frame" onclick="photoExpand(null)">
-			</div>
-			
 		</div>
 		
 	</div>
+	<!-- End: column 2 right -->
 
+</div>
 <!-- End smartphone / tablet look -->
+
+<!-- Photo browsing window -->
+<div id="photo-container-expand">
+	<div id="photo-title"></div>
+	<a href="javascript:void(0);" title="minimize" onclick="photoExpand(null)">X</a>
+	<img id="photo-frame" onclick="photoExpand(null)">
 </div>
 
 </body>
