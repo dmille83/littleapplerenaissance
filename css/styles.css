@@ -165,6 +165,10 @@ a.nav-icon {
 		min-width: 200px;
 	}
 	
+	#nav-menu {
+		width: 200px;
+	}
+	
 	.col-container > a.nav-icon {
 		display: none;
 	}

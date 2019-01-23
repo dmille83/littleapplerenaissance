@@ -20,13 +20,16 @@ window.onload = (function(){
 	}
 	*/
 	
-	var elements = document.getElementsByClassName("photo-container")[0].getElementsByTagName('img');
-	for (var i = 0; i < elements.length; i++) {
-		arr_photos[i] = elements[i];
-		(function(i){
-			//elements[i].onclick = function(){ photoExpand(i); };
-			elements[i].addEventListener('click', function(){ photoExpand(i); });
-		})(i)
+	var elements = document.getElementsByClassName("photo-container")
+	if (elements.length > 0) {
+		var elements = elements[0].getElementsByTagName('img');
+		for (var i = 0; i < elements.length; i++) {
+			arr_photos[i] = elements[i];
+			(function(i){
+				//elements[i].onclick = function(){ photoExpand(i); };
+				elements[i].addEventListener('click', function(){ photoExpand(i); });
+			})(i)
+		}
 	}
 	
 });
