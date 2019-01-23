@@ -19,6 +19,11 @@ div#banner img {
 	height: 200px;
 	width: auto;
 }
+div#banner div {
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.17em;
+}
 
 #nav-menu {
 	position:absolute;
