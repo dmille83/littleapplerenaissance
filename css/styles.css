@@ -1,0 +1,139 @@
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col-container {
+	width: 100%;
+	height: 100%;
+	clear: both;
+}
+
+div#banner {
+	text-align: center;
+}
+div#banner img {
+	height: 200px;
+	width: auto;
+}
+
+#nav-menu {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+	font-size: 17px;
+	background-color: #333;
+	display: none;
+}
+#nav-menu a, #nav-menu div {
+	color: #aaa;
+	padding: 14px 16px;
+	text-decoration: none;
+	display: block;
+}
+#nav-menu a {
+	color: white;
+	padding-left: 30px;
+}
+#nav-menu a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+a.nav-icon, #photo-expand a {
+	background-color: black;
+	color: white;
+	font-size: 17px;
+	padding: 14px 16px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.content-container {
+	padding-left:16px;
+	padding-bottom:16px;
+	clear: both;
+	background-color: white;
+}
+
+.photo-container img {
+	display: inline-block;
+	margin: 10px 20px 10px 0px;
+	width: calc(50% - 20px);
+	max-width: 300px;
+	height: 150px;
+	object-fit: none;
+	float: left;
+}
+
+#photo-container-expand {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid black;
+	text-align: center;
+	overflow: scroll;
+}
+#photo-container-expand #photo-title {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+#photo-container-expand img {
+	margin: 60px 0px 0px 0px;
+	height: auto;
+	max-width: calc(100% - 40px);
+	max-height: calc(100% - 40px);
+}
+
+
+@media only screen and (max-width: 600px) {
+	
+	div#banner img {
+		height: 150px;
+		width: auto;
+	}
+	
+	.photo-container img {
+		margin: 10px 10px 10px 10px;
+		width: calc(100% - 30px);
+	}
+	
+}
+
+@media only screen and (min-width: 601px) {
+	
+	.col-container {
+		display: table;
+	}
+	
+	.col-mobile, #nav-menu, .content-container {
+		position:relative;
+		display: table-cell;
+		vertical-align: top;
+		min-width: 200px;
+	}
+	
+	a.nav-icon {
+		display: none;
+	}
+	
+}
