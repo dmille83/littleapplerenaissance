@@ -15,7 +15,7 @@ html, body {
 div#banner {
 	text-align: center;
 }
-div#banner img {
+div#banner a img {
 	height: 200px;
 	width: auto;
 }
@@ -140,6 +140,10 @@ a.nav-icon {
 
 @media only screen and (max-width: 600px) {
 	
+	div#banner .banner-desktop {
+		display: none;
+	}
+	
 	div#banner img {
 		height: 150px;
 		width: auto;
@@ -153,6 +157,10 @@ a.nav-icon {
 }
 
 @media only screen and (min-width: 601px) {
+	
+	div#banner a.banner-mobile {
+		display: none;
+	}
 	
 	.col-container {
 		display: table;
