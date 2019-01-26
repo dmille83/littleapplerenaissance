@@ -51,8 +51,8 @@ $timestamp = $date->format('ymdhis');
 		
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
-			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"><img src="./img/banner.png"></a>
-			<a class="banner-desktop" href="?action=home"><img src="./img/banner.png"></a>
+			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"><img src="./img/banner-transparent.png?v=1"></a>
+			<a class="banner-desktop" href="?action=home"><img src="./img/banner-transparent.png?v=1"></a>
 			<!--<div>Little Apple Renaissance Festival</div>-->
 		</div>
 		
