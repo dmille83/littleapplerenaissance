@@ -68,11 +68,13 @@ a.nav-icon {
 	min-height: 100%;
 	padding-left: 16px;
 	position: relative;
+	/*
 	background-color: white;
 	background-image: url('../img/floral-old-paper-or-parchment.jpg');
 	background-position: right top;
 	background-size: cover;
 	background-repeat: repeat;
+	*/
 }
 
 svg.parchment {
@@ -82,7 +84,6 @@ svg.parchment {
   width: 100%;
   height: 100%;
   z-index: -1;
-  display: none;
 }
 
 .photo-container img {
