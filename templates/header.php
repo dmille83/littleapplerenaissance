@@ -21,7 +21,7 @@ $timestamp = $date->format('ymdhis');
 
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
-	<div id="nav-menu" class="col-mobile">
+	<div id="nav-menu" class="col-mobile parchment">
 		
 		<a href="?action=home">Home</a>
 		
@@ -48,6 +48,8 @@ $timestamp = $date->format('ymdhis');
 	<!-- Mobile: page below -->
 	<!-- Desktop: column 2 right -->
 	<div class="content-container">
+		
+		<div class="background parchment-floral"></div>
 		
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
