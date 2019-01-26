@@ -49,6 +49,30 @@ $timestamp = $date->format('ymdhis');
 	<!-- Desktop: column 2 right -->
 	<div class="content-container">
 		
+		<svg class="parchment">
+		  <defs>
+			<filter id="filter1" height="1.4" width="1.4">
+			  <feTurbulence baseFrequency="0.12" numOctaves="2" type="fractalNoise" result="result1" />
+			  <feDisplacementMap in2="result1" scale="99" result="result2" xChannelSelector="R" in="SourceGraphic" />
+			  <feComposite in2="result2" in="SourceGraphic" operator="atop" result="fbSourceGraphic" />
+			</filter>
+			<filter id="filter2" height="1.4" width="1.4">
+			  <feTurbulence baseFrequency="0.02" numOctaves="2" type="fractalNoise" result="result1" />
+			  <feDisplacementMap in2="result1" scale="99" result="result2" xChannelSelector="R" in="SourceGraphic" />
+			  <feComposite in2="result2" in="SourceGraphic" operator="atop" result="fbSourceGraphic" />
+			</filter>
+			<filter id="filter3" height="1.4" width="1.4">
+			  <feTurbulence baseFrequency="10.02" numOctaves="3" type="fractalNoise" result="result1" />
+			  <feDisplacementMap in2="result1" scale="99" result="result2" xChannelSelector="R" in="SourceGraphic" />
+			  <feComposite in2="result2" in="SourceGraphic" operator="atop" result="fbSourceGraphic" />
+			</filter>
+		  </defs>
+		  <rect fill="#83662C" width="100%" height="100%" x="0" y="0" />
+		  <rect fill="#C0AC79" filter="url(#filter1)" width="100%" height="100%" x="0" y="0" />
+		  <rect fill="#CDC5B4" filter="url(#filter2)" width="90%" height="90%" x="5%" y="5%" />
+		  <rect fill="#E0DAD0" filter="url(#filter3)" width="90%" height="90%" x="5%" y="5%" />
+		</svg>
+		
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
 			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"><img src="./img/banner.png"></a>
