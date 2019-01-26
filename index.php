@@ -1,5 +1,5 @@
 <?php
-include("templates/header.html");
+include("templates/header.php");
 
 if (!empty($_GET['action'])) {
 	$action = $_GET['action'];
@@ -14,4 +14,4 @@ if (file_exists("pages/$action.html")) {
 	include("pages/404.html");
 }
 
-include("templates/footer.html");
+include("templates/footer.php");
