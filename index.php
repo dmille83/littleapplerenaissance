@@ -7,6 +7,11 @@ if (!empty($_GET['action'])) {
 	$action = 'home';
 }
 $action = basename($action);
-include("pages/$action.html");
+if (file_exists("pages/$action.html")) {
+	include("pages/$action.html");
+} else {
+	//echo("<p><br/>$action</p>"); // dangerous code insertion?
+	include("pages/404.html");
+}
 
 include("templates/footer.html");
