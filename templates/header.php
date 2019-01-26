@@ -47,9 +47,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: page below -->
 	<!-- Desktop: column 2 right -->
-	<div class="content-container">
-		
-		<div class="background parchment-floral"></div>
+	<div class="content-container parchment-floral">
 		
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">

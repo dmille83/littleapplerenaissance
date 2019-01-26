@@ -6,30 +6,16 @@ html, body {
 	margin: 0px;
 }
 
-.parchment {
+.parchment, .parchment-floral {
 	background-color: white;
-	background-image: url('../img/parchment-kjpargeter-freepik.jpg');
-	background-position: right top;
+	background-image: url('../img/parchment-kjpargeter-freepik.jpg?v=1');
+	background-position: left top;
 	background-size: cover;
 	background-repeat: repeat;
 }
-
 .parchment-floral {
-	background-color: white;
-	background-image: url('../img/floral-old-paper-or-parchment.jpg');
+	background-image: url('../img/floral-old-paper-or-parchment.jpg?v=1');
 	background-position: right top;
-	background-size: cover;
-	background-repeat: repeat;
-}
-
-.background {
-	opacity: 0.5;
-	z-index: -1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 }
 
 .col-container {
@@ -59,9 +45,7 @@ div#banner div {
 	overflow: hidden;
 	font-size: 17px;
 	background-color: #333;
-	background-position: left top;
 	display: none;
-	z-index: 100;
 }
 #nav-menu a, #nav-menu div {
 	/* color: #aaa; */
@@ -94,13 +78,11 @@ a.nav-icon {
 	top: 0;
 	font-weight: bold;
 	text-decoration: none;
-	z-index: 110;
 }
 
 .content-container {
 	min-height: 100%;
 	padding-left: 16px;
-	position: relative;
 }
 
 .photo-container img {
@@ -121,8 +103,7 @@ a.nav-icon {
 	background-color: rgba(255, 255, 255, 0.9);
 	border: 1px solid black;
 	text-align: center;
-	overflow: scroll;
-	z-index: 200;
+	overflow-y: scroll;
 }
 #photo-container-expand #photo-title {
 	position: absolute;
@@ -138,7 +119,6 @@ a.nav-icon {
 	margin: 60px 0px 0px 0px;
 	height: auto;
 	max-width: calc(100% - 40px);
-	max-height: calc(100% - 40px);
 }
 #photo-container-expand a.nav-icon {
 	width: 70px;
