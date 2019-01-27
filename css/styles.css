@@ -14,8 +14,9 @@ html, body {
 	background-repeat: repeat;
 }
 .parchment-floral {
-	background-image: url('../img/floral-old-paper-or-parchment.jpg?v=3');
+	background-image: url('../img/floral-old-paper-or-parchment.jpg?v=6');
 	background-position: right top;
+	background-size: 100% auto;
 }
 
 .col-container {
@@ -167,10 +168,6 @@ a.nav-icon {
 	
 	#nav-menu {
 		background-image: url('');
-	}
-	
-	.parchment-floral {
-		background-size: 100% auto;
 	}
 	
 	.photo-container img {
