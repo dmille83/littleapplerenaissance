@@ -11,8 +11,8 @@ $timestamp = $date->format('ymdhis');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<link rel="stylesheet" href="./css/styles.css?v=<?php echo $timestamp; ?>">
-<script src="./js/main.js?v=<?php echo $timestamp; ?>"></script>
+<link rel="stylesheet" href="css/styles.css?v=<?php echo $timestamp; ?>">
+<script src="js/main.js?v=<?php echo $timestamp; ?>"></script>
 </head>
 <body>
 
@@ -23,21 +23,21 @@ $timestamp = $date->format('ymdhis');
 	<!-- Desktop: column 1 left -->
 	<div id="nav-menu" class="col-mobile parchment">
 		
-		<a href="?action=home">Home</a>
+		<a href="/">Home</a>
 		
 		<div>About</div>
-		<a href="?action=calendar">Calendar</a>
-		<a href="?action=schedule">Festival Schedule</a>
+		<a href="calendar">Calendar</a>
+		<a href="schedule">Festival Schedule</a>
 		
 		<div>Become Involved</div>
-		<a href="?action=donate">Donate</a>
-		<a href="?action=sponsor">Become a Vendor</a>
-		<a href="?action=sponsor">Become a Sponsor</a>
-		<a href="?action=volunteer">Volunteer at Event</a>
+		<a href="donate">Donate</a>
+		<a href="sponsor">Become a Vendor</a>
+		<a href="sponsor">Become a Sponsor</a>
+		<a href="volunteer">Volunteer at Event</a>
 		
 		<div>FAQ</div>
-		<a href="?action=faq">FAQ</a>
-		<a href="?action=contact">Contact Us</a>
+		<a href="faq">FAQ</a>
+		<a href="contact">Contact Us</a>
 		
 	</div>
 	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()">
@@ -52,7 +52,7 @@ $timestamp = $date->format('ymdhis');
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
 			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"></a>
-			<a class="banner-desktop" href="?action=home"></a>
+			<a class="banner-desktop" href="/"></a>
 			<!--<div>Little Apple Renaissance Festival</div>-->
 		</div>
 		
