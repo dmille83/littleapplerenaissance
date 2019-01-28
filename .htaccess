@@ -63,6 +63,9 @@ DirectoryIndex index.php index.html index.htm
   
   # Redirect to pass sub-pages as an action parameter
   RewriteRule ^/?([a-zA-Z_]+)$ index.php?action=$1
+  
+  # Redirect attempts to access sub-folders
+  RewriteRule ^/?([a-zA-Z_]+)/$ index.php?action=404
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
