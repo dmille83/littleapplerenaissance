@@ -62,7 +62,7 @@ DirectoryIndex index.php index.html index.htm
   RewriteEngine on
   
   # Redirect to pass sub-pages as an action parameter
-  RewriteRule ^/?([a-zA-Z_]+)$ index.php?action=$1
+  RewriteRule ^/?([a-zA-Z0-9_-]+)$ index.php?action=$1
   
   # Redirect attempts to access sub-folders
   RewriteRule ^/?([a-zA-Z_]+)/$ index.php?action=404
