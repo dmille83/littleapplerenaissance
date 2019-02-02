@@ -38,6 +38,7 @@ $timestamp = $date->format('ymdhis');
 		<div>FAQ</div>
 		<a href="faq">FAQ</a>
 		<a href="contact">Contact Us</a>
+		<a href="https://www.facebook.com/LittleAppleRenFest" target=_blank>Facebook</a>
 		
 	</div>
 	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()">
