@@ -108,6 +108,7 @@ a.nav-icon {
 	width: 300px;
 	height: 150px;
 	object-fit: cover;
+	cursor: pointer;
 }
 
 #photo-container-expand {
