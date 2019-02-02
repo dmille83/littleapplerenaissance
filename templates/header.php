@@ -27,7 +27,9 @@ $timestamp = $date->format('ymdhis');
 		
 		<div>About</div>
 		<a href="calendar">Calendar</a>
-		<a href="schedule">Festival Schedule</a>
+		<a href="admission">Admission</a>
+		<a href="photo-gallery">Photo Gallery</a>
+		<!--<a href="schedule">Festival Schedule</a>-->
 		
 		<div>Become Involved</div>
 		<a href="donate">Donate</a>
@@ -36,7 +38,7 @@ $timestamp = $date->format('ymdhis');
 		<a href="volunteer">Volunteer at Event</a>
 		
 		<div>FAQ</div>
-		<a href="faq">FAQ</a>
+		<!--<a href="faq">FAQ</a>-->
 		<a href="contact">Contact Us</a>
 		<a href="https://www.facebook.com/LittleAppleRenFest" target=_blank>Facebook</a>
 		

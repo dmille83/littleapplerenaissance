@@ -20,6 +20,15 @@ window.onload = (function(){
 	}
 	*/
 	
+	// Late-load image sources
+	[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+		img.setAttribute('src', img.getAttribute('data-src'));
+		img.onload = function() {
+			img.removeAttribute('data-src');
+		};
+	});
+	
+	// Add event listeners to the photo gallery
 	var elements = document.getElementsByClassName("photo-container")
 	if (elements.length > 0) {
 		var elements = elements[0].getElementsByTagName('img');

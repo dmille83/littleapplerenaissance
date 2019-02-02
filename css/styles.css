@@ -6,6 +6,17 @@ html, body {
 	margin: 0px;
 }
 
+table.padding-5 tr td {
+	padding: 5px 10px 5px 10px;
+}
+
+img[data-src] {
+		opacity: 0;
+}
+img {
+	opacity: 1; transition: opacity 0.3s;
+}
+
 .parchment, .parchment-floral {
 	background-color: white;
 	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=1');
@@ -96,7 +107,7 @@ a.nav-icon {
 	margin: 0px 16px 16px 0px;
 	width: 300px;
 	height: 150px;
-	object-fit: none;
+	object-fit: cover;
 }
 
 #photo-container-expand {
@@ -201,8 +212,4 @@ a.nav-icon {
 		display: none;
 	}
 	
-}
-
-table.padding-5 tr td {
-	padding: 5px 10px 5px 10px;
 }
