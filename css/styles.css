@@ -202,3 +202,7 @@ a.nav-icon {
 	}
 	
 }
+
+table.padding-5 tr td {
+	padding: 5px 10px 5px 10px;
+}
