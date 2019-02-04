@@ -107,6 +107,8 @@ if(isset($_POST['email_from'])) {
 		}
 		echo "</p>";
 		
+		if ($mail_success == true) { die(); }
+		
 	}
 
 } else {
