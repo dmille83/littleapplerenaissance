@@ -17,6 +17,10 @@ img {
 	opacity: 1; transition: opacity 0.3s;
 }
 
+form, form table, form input, form textarea {
+	width: 100%;
+}
+
 .parchment, .parchment-floral {
 	background-color: white;
 	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=1');
