@@ -66,14 +66,15 @@ if(isset($_POST['email'])) {
 	function clean_string($string) {
 		$bad = array("content-type","bcc:","to:","cc:","href");
 		$string = htmlspecialchars($string, ENT_COMPAT);
+		//return str_replace("<","&lt;",$string); return str_replace(">","&gt;",$string);
 		return str_replace($bad,"",$string);
 	}
 	
-	$email_message .= "First Name: ".clean_string($first_name)."<br />";
-	$email_message .= "Last Name: ".clean_string($last_name)."<br />";
-	$email_message .= "Email: ".clean_string($email_from)."<br />";
-	$email_message .= "Telephone: ".clean_string($telephone)."<br />";
-	$email_message .= "Message: ".clean_string($message)."<br />";
+	$email_message .= "<strong>First Name:</strong> ".clean_string($first_name)."<br />";
+	$email_message .= "<strong>Last Name:</strong> ".clean_string($last_name)."<br />";
+	$email_message .= "<strong>Email:</strong> ".clean_string($email_from)."<br />";
+	$email_message .= "<strong>Telephone:</strong> ".clean_string($telephone)."<br />";
+	$email_message .= "<strong>Message:</strong> ".clean_string($message)."<br />";
 	$email_message = wordwrap($email_message, 70);
 	
 	//echo $email_message;
