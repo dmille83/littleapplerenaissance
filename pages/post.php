@@ -1,12 +1,29 @@
 <?php 
+
 ini_set('display_errors', 1);
+
+/*
 echo "<strong>PHP POST:</strong>";
 echo "<pre>";
 print_r($_POST);
 echo "</pre>";
+*/
+
+echo "<strong>PHP POST:</strong><br />";
+printArray($_POST);
+function printArray($array){
+    foreach ($array as $key => $value){
+		echo $key . " => " . nl2br(htmlspecialchars($value, ENT_COMPAT)) . "<br />";
+        if(is_array($value)){ //If $value is an array, print it as well!
+            printArray($value);
+        }  
+    } 
+}
+
 ?>
 
 <?php
+/*
 $email_from = "danemiller22@gmail.com";
 $to = "littleapplerenfest@gmail.com";
 $subject = "YOUR SUBJECT HERE";
@@ -26,4 +43,5 @@ if ($mail_success == true) {
 } else {
 	echo "Email sending failed!";
 }
+*/
 ?>

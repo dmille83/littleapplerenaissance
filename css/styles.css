@@ -17,8 +17,12 @@ img {
 	opacity: 1; transition: opacity 0.3s;
 }
 
-form, form table, form input, form textarea {
+form, form table, form input[type="text"], form textarea {
 	width: 100%;
+}
+form table tr td {
+	vertical-align: top;
+	text-align: left;
 }
 
 .parchment, .parchment-floral {
