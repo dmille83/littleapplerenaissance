@@ -6,6 +6,50 @@
 //print_r($_POST);
 //echo "</pre>";
 
+// EDIT THE 2 LINES BELOW AS REQUIRED
+$email_to = "littleapplerenfest@gmail.com";
+$email_subject = "Little Apple Ren Fest - Contact Us";
+$email_message = "Form details below.<br />";
+
+$error_message = "";
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+$string_exp = "/^[A-Za-z .'-]+$/";
+function died($error) {
+	// your error code can go here
+	echo "We are very sorry, but there were error(s) found with the form you submitted.<br />";
+	echo "<span style='color: red;'>Please fix these errors before re-submitting the form.</span><br />";
+	echo $error;
+	//die();
+}
+function clean_string($string) {
+	$bad = array("content-type","bcc:","to:","cc:","href");
+	$string = htmlspecialchars($string, ENT_COMPAT);
+	$string = nl2br($string); // replace "/n" with "<br />"
+	return str_replace($bad,"",$string);
+}
+function validateField($name, $var, $exp, $len) {
+	global $email_message;
+	global $error_message;
+	global $$var;
+	$err = "<ul>";
+	$fails = false;
+	if (!isset($_POST[$var])) {
+		$fails = true;
+		$err .= "<li>no value was submitted</li>";
+	} else {
+		$val = $_POST[$var];
+		$$var = $val;
+		if ($exp != "") { if (!preg_match($exp,$val)) { $fails = true; $err .= "<li>did not contain valid characters</li>"; } }
+		if ($len > 0 && strlen($val) < $len) { $fails = true; $err .= "<li>shorter than ".$len." characters</li>"; }
+	}
+	$err .= "</ul>";
+	if ($fails == true) {
+		$error_message .= '<br />The ' . $name . ' you entered does not appear to be valid.' . $err;
+	} else {
+		$email_message .= "<strong>" . $name . ":</strong> ".clean_string($val)."<br />";
+	}
+}
+
 // DEFAULT VALUES
 $first_name = null; // required
 $last_name = null; // required
@@ -13,101 +57,47 @@ $email_from = null; // required
 $telephone = null; // not required
 $message = null; // required
 
-if(isset($_POST['email'])) {
-
-	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to = "littleapplerenfest@gmail.com";
-	$email_subject = "Little Apple Ren Fest - Contact Us";
+if(isset($_POST['email_from'])) {
 	
-	function died($error) {
-		// your error code can go here
-		echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-		echo "These errors appear below.<br /><br />";
-		echo $error."<br /><br />";
-		echo "Please fix these errors before re-submitting the form.<br /><br />";
-		die();
-	}
+	validateField("Email Address", "email_from", $email_exp, 0);
+	validateField("First Name", "first_name", $string_exp, 0);
+	validateField("Last Name", "last_name", $string_exp, 0);
+	$email_message .= "<strong>Telephone:</strong> ".clean_string($telephone)."<br />";
+	validateField("Message", "message", "", 3);
 
-	// validation expected data exists
-	if(!isset($_POST['first_name']) ||
-		!isset($_POST['last_name']) ||
-		!isset($_POST['email']) ||
-		!isset($_POST['telephone']) ||
-		!isset($_POST['message'])) {
-		died('We are sorry, but there appears to be a problem with the form you submitted.');		 
-	}
-	
-	$first_name = $_POST['first_name']; // required
-	$last_name = $_POST['last_name']; // required
-	$email_from = $_POST['email']; // required
-	$telephone = $_POST['telephone']; // not required
-	$message = $_POST['message']; // required
-
-	$error_message = "";
-	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-	$string_exp = "/^[A-Za-z .'-]+$/";
-
-	if(!preg_match($email_exp, $email_from)) {
-		$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-	}
-	
-	if(!preg_match($string_exp,$first_name)) {
-		$error_message .= 'The First Name you entered does not appear to be valid.<br />';
-	}
-
-	if(!preg_match($string_exp,$last_name)) {
-		$error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-	}
-
-	if(strlen($message) < 2) {
-		$error_message .= 'The Message you entered does not appear to be valid.<br />';
-	}
-	
 	if(strlen($error_message) > 0) {
 		died($error_message);
-	}
-
-	$email_message = "Form details below.<br />";
-
-	function clean_string($string) {
-		$bad = array("content-type","bcc:","to:","cc:","href");
-		$string = htmlspecialchars($string, ENT_COMPAT);
-		$string = nl2br($string); // replace "/n" with "<br />"
-		return str_replace($bad,"",$string);
-	}
-	
-	$email_message .= "<strong>First Name:</strong> ".clean_string($first_name)."<br />";
-	$email_message .= "<strong>Last Name:</strong> ".clean_string($last_name)."<br />";
-	$email_message .= "<strong>Email:</strong> ".clean_string($email_from)."<br />";
-	$email_message .= "<strong>Telephone:</strong> ".clean_string($telephone)."<br />";
-	$email_message .= "<strong>Message:</strong> ".clean_string($message)."<br />";
-	$email_message = wordwrap($email_message, 70);
- 
-	// create email headers
-	$headers = 'From: '.$email_from."\r\n".
-	'Reply-To: '.$email_from."\r\n" .
-	"Content-Type: text/html; charset=UTF-8\r\n" .
-	'X-Mailer: PHP/' . phpversion();
-	$mail_success = mail($email_to, $email_subject, $email_message, $headers);
-	
-	//echo "<br />" . nl2br($headers) . "<br /><br />" . $email_message;
-	
-	echo "<p style='font-weight: bold; font-style: italic;'>";
-	if ($mail_success == true) {
-		echo "Thank you for contacting us. We will be in touch with you very soon.<br /> <br /><a href='mailto:littleapplerenfest@gmail.com'>littleapplerenfest@gmail.com</a>";
-		
-		// EMPTY THE INPUT FIELDS IF THE FORM WAS SUBMITTED SUCCESSFULLY
-		$first_name = null; // required
-		$last_name = null; // required
-		$email_from = null; // required
-		$telephone = null; // not required
-		$message = null; // required
-		
 	} else {
-		echo "Failed to send email to <a href='mailto:littleapplerenfest@gmail.com'>littleapplerenfest@gmail.com</a>";
+		
+		$email_message = wordwrap($email_message, 70);
+	 
+		// create email headers
+		$headers = 'From: '.$email_from."\r\n".
+		'Reply-To: '.$email_from."\r\n" .
+		"Content-Type: text/html; charset=UTF-8\r\n" .
+		'X-Mailer: PHP/' . phpversion();
+		$mail_success = mail($email_to, $email_subject, $email_message, $headers);
+		
+		//echo "<br />" . nl2br($headers) . "<br /><br />" . $email_message;
+		
+		echo "<p style='font-weight: bold; font-style: italic;'>";
+		if ($mail_success == true) {
+			echo "Thank you for contacting us. We will be in touch with you very soon.<br /> <br /><a href='mailto:littleapplerenfest@gmail.com'>littleapplerenfest@gmail.com</a>";
+			
+			// EMPTY THE INPUT FIELDS IF THE FORM WAS SUBMITTED SUCCESSFULLY
+			$first_name = null; // required
+			$last_name = null; // required
+			$email_from = null; // required
+			$telephone = null; // not required
+			$message = null; // required
+			
+		} else {
+			echo "<span style='color: red;'>Failed to send email to </span><a href='mailto:littleapplerenfest@gmail.com'>littleapplerenfest@gmail.com</a>";
+		}
+		echo "</p>";
+		
 	}
-	echo "</p>";
-	
+
 } else {
 	
 	//echo "<p>Nothing submitted.</p>";
@@ -141,10 +131,10 @@ if(isset($_POST['email'])) {
 		</tr>
 		<tr>
 			<td>
-				<label for="email">Email Address *</label>
+				<label for="email_from">Email Address *</label>
 			</td>
 			<td>
-				<input type="text" name="email" maxlength="80" size="30" value="<?php echo $email_from; ?>">
+				<input type="text" name="email_from" maxlength="80" size="30" value="<?php echo $email_from; ?>">
 			</td>
 		</tr>
 		<tr>
