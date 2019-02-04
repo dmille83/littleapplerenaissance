@@ -61,19 +61,19 @@ if(isset($_POST['email'])) {
 		died($error_message);
 	}
 
-	$email_message = "Form details below./n/n";
+	$email_message = "Form details below.<br />";
 
 	function clean_string($string) {
 		$bad = array("content-type","bcc:","to:","cc:","href");
-	$string = htmlspecialchars($string, ENT_COMPAT);
+		$string = htmlspecialchars($string, ENT_COMPAT);
 		return str_replace($bad,"",$string);
 	}
 	
-	$email_message .= "First Name: ".clean_string($first_name)."/n";
-	$email_message .= "Last Name: ".clean_string($last_name)."/n";
-	$email_message .= "Email: ".clean_string($email_from)."/n";
-	$email_message .= "Telephone: ".clean_string($telephone)."/n";
-	$email_message .= "Message: ".clean_string($message)."/n";
+	$email_message .= "First Name: ".clean_string($first_name)."<br />";
+	$email_message .= "Last Name: ".clean_string($last_name)."<br />";
+	$email_message .= "Email: ".clean_string($email_from)."<br />";
+	$email_message .= "Telephone: ".clean_string($telephone)."<br />";
+	$email_message .= "Message: ".clean_string($message)."<br />";
 	$email_message = wordwrap($email_message, 70);
 	
 	//echo $email_message;
@@ -81,6 +81,7 @@ if(isset($_POST['email'])) {
 	// create email headers
 	$headers = 'From: '.$email_from."\r\n".
 	'Reply-To: '.$email_from."\r\n" .
+	"Content-Type: text/html; charset=UTF-8\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 	$mail_success = mail($email_to, $email_subject, $email_message, $headers);
 	
