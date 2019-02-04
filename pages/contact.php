@@ -1,23 +1,24 @@
 <?php
+// DEBUG:
 
 //ini_set('display_errors', 1);
 
 //echo "<pre>";
 //print_r($_POST);
 //echo "</pre>";
+?>
 
-// EDIT THE 2 LINES BELOW AS REQUIRED
-$email_to = "littleapplerenfest@gmail.com";
-$email_subject = "Little Apple Ren Fest - Contact Us";
-$email_message = "Form details below.<br />";
+<?php
+// FUNCTIONS USED:
 
+$email_message = "";
 $error_message = "";
 $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 $string_exp = "/^[A-Za-z .'-]+$/";
 function died($error) {
 	// your error code can go here
 	echo "We are very sorry, but there were error(s) found with the form you submitted.<br />";
-	echo "<span style='color: red;'>Please fix these errors before re-submitting the form.</span><br />";
+	echo "<span style='color: red;'>Please fix these errors before re-submitting the form.</span><br /><br />";
 	echo $error;
 	//die();
 }
@@ -44,11 +45,20 @@ function validateField($name, $var, $exp, $len) {
 	}
 	$err .= "</ul>";
 	if ($fails == true) {
-		$error_message .= '<br />The ' . $name . ' you entered does not appear to be valid.' . $err;
+		$error_message .= '<div>The ' . $name . ' you entered does not appear to be valid.' . $err . '</div>';
 	} else {
 		$email_message .= "<strong>" . $name . ":</strong> ".clean_string($val)."<br />";
 	}
 }
+
+?>
+
+<?php
+// THIS FORM:
+
+// EDIT THE 2 LINES BELOW AS REQUIRED
+$email_to = "littleapplerenfest@gmail.com";
+$email_subject = "Little Apple Ren Fest - Contact Us";
 
 // DEFAULT VALUES
 $first_name = null; // required
@@ -64,11 +74,12 @@ if(isset($_POST['email_from'])) {
 	validateField("Last Name", "last_name", $string_exp, 0);
 	$email_message .= "<strong>Telephone:</strong> ".clean_string($telephone)."<br />";
 	validateField("Message", "message", "", 3);
-
+	
 	if(strlen($error_message) > 0) {
 		died($error_message);
 	} else {
 		
+		$email_message = "Form details below.<br />" . $email_message;
 		$email_message = wordwrap($email_message, 70);
 	 
 		// create email headers
