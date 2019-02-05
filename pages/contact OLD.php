@@ -128,7 +128,7 @@ if(isset($_POST['email'])) {
 				<label for="first_name">First Name *</label>
 			</td>
 			<td>
-				<input type="text" name="first_name" maxlength="50" size="30" value="<?php echo $first_name; ?>">
+				<input type="text" name="first_name" maxlength="50" size="30">
 			</td>
 		</tr>
 		<tr>
@@ -136,7 +136,7 @@ if(isset($_POST['email'])) {
 				<label for="last_name">Last Name *</label>
 			</td>
 			<td>
-				<input type="text" name="last_name" maxlength="50" size="30" value="<?php echo $last_name; ?>">
+				<input type="text" name="last_name" maxlength="50" size="30">
 			</td>
 		</tr>
 		<tr>
@@ -144,7 +144,7 @@ if(isset($_POST['email'])) {
 				<label for="email">Email Address *</label>
 			</td>
 			<td>
-				<input type="text" name="email" maxlength="80" size="30" value="<?php echo $email_from; ?>">
+				<input type="text" name="email" maxlength="80" size="30">
 			</td>
 		</tr>
 		<tr>
@@ -152,7 +152,7 @@ if(isset($_POST['email'])) {
 				<label for="telephone">Telephone Number</label>
 			</td>
 			<td>
-				<input type="text" name="telephone" maxlength="30" size="30" value="<?php echo $telephone; ?>">
+				<input type="text" name="telephone" maxlength="30" size="30">
 			</td>
 		</tr>
 		<tr>
@@ -160,7 +160,7 @@ if(isset($_POST['email'])) {
 				<label for="message">Message *</label>
 			</td>
 			<td>
-				<textarea name="message" maxlength="1000" cols="25" rows="6"><?php echo $message; ?></textarea>
+				<textarea name="message" maxlength="1000" cols="25" rows="6"></textarea>
 			</td>
 		</tr>
 		<tr>
