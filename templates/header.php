@@ -48,9 +48,9 @@ $timestamp = $date->format('ymdhis');
 	</a>
 	<!-- End: column 1 left -->
 	
-	<!-- Mobile: page below -->
-	<!-- Desktop: column 2 right -->
-	<div class="content-container parchment-floral">
+	<!-- Mobile: page below nav -->
+	<!-- Desktop: nav in column 1 page in column 2 -->
+	<div id="content-container" class="parchment-floral">
 		
 		<!-- Banner title -->
 		<div id="banner" title="Little Apple Renaissance Festival">
@@ -59,5 +59,4 @@ $timestamp = $date->format('ymdhis');
 			<!--<div>Little Apple Renaissance Festival</div>-->
 		</div>
 		
-		<!-- Page content -->
-		<div id="nav-content" class="col-mobile">
+		<!-- Page content start -->

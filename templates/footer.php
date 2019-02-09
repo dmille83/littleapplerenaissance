@@ -1,4 +1,4 @@
-		</div>
+		<!-- Page content end -->
 		
 	</div>
 	<!-- End: column 2 right -->

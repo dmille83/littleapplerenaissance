@@ -105,9 +105,9 @@ a.nav-icon {
 	text-decoration: none;
 }
 
-.content-container {
+#content-container {
 	min-height: 100%;
-	padding-left: 16px;
+	padding: 0px 16px 0px 16px;
 }
 
 .photo-container img {
@@ -206,7 +206,7 @@ a.nav-icon {
 		display: table;
 	}
 	
-	.col-mobile, #nav-menu, .content-container {
+	.col-mobile, #nav-menu, #content-container {
 		position:relative;
 		display: table-cell;
 		vertical-align: top;
@@ -215,6 +215,10 @@ a.nav-icon {
 	
 	#nav-menu {
 		width: 200px;
+	}
+	
+	#content-container {
+		width: calc(100% - 200px);
 	}
 	
 	.col-container > a.nav-icon {
