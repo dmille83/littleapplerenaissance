@@ -11,16 +11,8 @@
 </p>
 <p><strong>Admission to this event is free!</strong></p>
 
-<div class="photo-container">
-	
-	<img title="welcome to the community fair" data-src="./photos/2019_Gloves.jpg">
-	<img title="photos from prior years" data-src="./photos/2019_Collage1.jpg">
-	<img title="photos from prior years" data-src="./photos/2019_Collage2.jpg">
-	
-	<!--
-	<img title="a bridge somewhere" src="./photos/1.jpg">
-	<img title="a ceiling somewhere" src="./photos/2.jpg">
-	<img title="a murder of crows... I mean a plague of doctors... plague doctors" src="./photos/3.jpg">
-	<img title="a painting" src="./photos/4.jpg">
-	-->
-</div>
+<?php
+// LOAD FILES FROM A GOOGLE DRIVE FOLDER AS A PHOTO ALBUM
+$google_drive_folder_id = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';
+include("templates/photos.php");
+?>
