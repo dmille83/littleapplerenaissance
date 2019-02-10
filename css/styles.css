@@ -163,7 +163,7 @@ iframe.photo-container {
 	text-align: center;
 }
 #photo-container-expand img {
-	margin: 0px 0px 0px 0px;
+	margin: 60px 0px 0px 0px;
 	height: auto;
 	max-width: calc(100% - 40px);
 }
