@@ -49,6 +49,7 @@ if ($mail_success == true) {
 ?>
 
 <?php
+/*
 // https://stackoverflow.com/questions/9802788/call-a-rest-api-in-php
 // https://www.weichieprojects.com/blog/curl-api-calls-with-php
 
@@ -92,5 +93,28 @@ function callAPI($method, $url, $data){
 }
 
 echo callAPI('POST', 'https://photoslibrary.googleapis.com/v1/mediaItems:search', '{ "albumId": "ABxfWhHnu1c-l5Pr9QbIBRgAgdLpNfCEGAd7WSQN2OHljoavBwyJmQpN49Vu2seWNKjGm9pYDSHx" }');
+*/
+?>
+
+<?php
+// SOURCE: http://htmlparsing.com/php.html
+
+$url = 'https://drive.google.com/embeddedfolderview?id=17n-iswLPlotLuCsP2t70a7KDK2Indi2m#grid';
+//$url = 'https://drive.google.com/embeddedfolderview?id=17n-iswLPlotLuCsP2t70a7KDK2Indi2m#list';
+//$url = 'https://drive.google.com/drive/folders/17FyR8hDU6K3Az17zW1MQnsSMTKcyeKs5';
+//$url = 'https://photos.app.goo.gl/f786q7dW1BdrsjxXA';
+
+// FIND THE IMAGE URLS
+$page = file_get_contents($url);
+$dom = new DOMDocument;
+libxml_use_internal_errors(true);
+$dom->loadHTML($page);
+foreach($dom->getElementsByTagName('img') as $link) {
+	$img_src = $link->getAttribute('src');
+	if (strpos($img_src, 'type/image/jpeg') == false) {
+		echo '<img src="' . str_replace('=s190', '=s1080', $img_src) . '">';
+		echo "<br />";
+	}
+}
 
 ?>

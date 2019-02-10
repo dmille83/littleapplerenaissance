@@ -29,13 +29,12 @@ form table tr td {
 	background-color: white;
 	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=1');
 	background-position: left top;
-	background-size: cover;
+	background-size: 100% auto;
 	background-repeat: repeat;
 }
 .parchment-floral {
 	background-image: url('../img/floral-old-paper-or-parchment.jpg?v=6');
 	background-position: right top;
-	background-size: 100% auto;
 }
 
 .col-container {
@@ -152,7 +151,7 @@ iframe.photo-container {
 	text-align: center;
 }
 #photo-container-expand img {
-	margin: 60px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	height: auto;
 	max-width: calc(100% - 40px);
 }
