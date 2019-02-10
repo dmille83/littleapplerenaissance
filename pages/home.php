@@ -13,6 +13,6 @@
 
 <?php
 // LOAD FILES FROM A GOOGLE DRIVE FOLDER AS A PHOTO ALBUM
-$google_drive_folder_id = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';
-include("templates/photos.php");
+$gdrive_folder_id = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';
+include("templates/photos_gdrive.php");
 ?>

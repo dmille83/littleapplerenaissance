@@ -19,9 +19,9 @@ CONS:	alphabetical with no custom sorting (yet)
 <div class="photo-container">
 <?php
 	// FIND THE IMAGE URLS
-	//$google_drive_folder_id = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';
-	if (isset($google_drive_folder_id) == true) {
-		$url = 'https://drive.google.com/embeddedfolderview?id=' . $google_drive_folder_id . '#grid';
+	//$gdrive_folder_id = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';
+	if (isset($gdrive_folder_id) == true) {
+		$url = 'https://drive.google.com/embeddedfolderview?id=' . $gdrive_folder_id . '#grid';
 		$page = file_get_contents($url);
 		$dom = new DOMDocument;
 		libxml_use_internal_errors(true);
@@ -34,7 +34,7 @@ CONS:	alphabetical with no custom sorting (yet)
 			}
 		}
 	} else {
-		echo '<div style="font-weight:bold;">Error: The variable $google_drive_folder_id must be set before including ./templates/photos.php in the page!</div>';
+		echo '<div style="font-weight:bold;">Error: The variable $gdrive_folder_id must be set before including ./templates/photos_gdrive.php in the page!</div>';
 	}
 ?>
 </div>
