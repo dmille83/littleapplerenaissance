@@ -16,7 +16,7 @@ CONS:	alphabetical with no custom sorting (yet)
 	data-description="Album by Little Apple Ren Fest">
 -->
 
-<div class="photo-container">
+<div class="photo-container" title="click on a photo to expand">
 <?php
 	// FIND THE IMAGE URLS
 	//$gdrive_folder_id = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';
