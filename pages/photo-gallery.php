@@ -114,9 +114,4 @@ CONS: alphabetical with no custom sorting (yet)
 	}
 	?>
 </div>
-<p>
-	<a href="https://photos.app.goo.gl/f786q7dW1BdrsjxXA" target=_blank>Google Photo Album</a>
-	&nbsp;&nbsp;
-	<a href="https://www.publicalbum.org/blog/embedding-google-photos-albums" target=_blank>Embedding Google Photo Albums</a>
-</p>
-</div>
+<p><a href="<?php echo $url; ?>" target=_blank>Google Drive Folder</a></p>
