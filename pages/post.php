@@ -9,6 +9,7 @@ print_r($_POST);
 echo "</pre>";
 */
 
+/*
 echo "<strong>PHP POST:</strong><br />";
 printArray($_POST);
 function printArray($array){
@@ -19,6 +20,7 @@ function printArray($array){
         }  
     } 
 }
+*/
 
 ?>
 
@@ -44,4 +46,51 @@ if ($mail_success == true) {
 	echo "Email sending failed!";
 }
 */
+?>
+
+<?php
+// https://stackoverflow.com/questions/9802788/call-a-rest-api-in-php
+// https://www.weichieprojects.com/blog/curl-api-calls-with-php
+
+// Method: POST, PUT, GET etc
+// Data: array("param" => "value") ==> index.php?param=value
+
+function callAPI($method, $url, $data){
+   $curl = curl_init();
+
+   switch ($method){
+      case "POST":
+         curl_setopt($curl, CURLOPT_POST, 1);
+         if ($data)
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+         break;
+      case "PUT":
+         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+         if ($data)
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);			 					
+         break;
+      default:
+         if ($data)
+            $url = sprintf("%s?%s", $url, http_build_query($data));
+   }
+
+   // OPTIONS:
+   curl_setopt($curl, CURLOPT_URL, $url);
+   curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+      'Authorization: Bearer OyGkvh_Gpibkl4QLhOJptTC3',
+	  'Accept: application/json',
+      'Content-Type: application/json',
+   ));
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+
+   // EXECUTE:
+   $result = curl_exec($curl);
+   if(!$result){die("Connection Failure");}
+   curl_close($curl);
+   return $result;
+}
+
+echo callAPI('POST', 'https://photoslibrary.googleapis.com/v1/mediaItems:search', '{ "albumId": "ABxfWhHnu1c-l5Pr9QbIBRgAgdLpNfCEGAd7WSQN2OHljoavBwyJmQpN49Vu2seWNKjGm9pYDSHx" }');
+
 ?>
