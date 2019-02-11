@@ -97,11 +97,6 @@ div#banner div {
 	color: white;
 	padding-left: 30px;
 }
-#nav-menu a:hover, a.nav-icon:hover {
-	background-color: #ddd;
-	color: black;
-	opacity: 1.0;
-}
 
 a.nav-icon {
 	background-color: black;
@@ -244,6 +239,12 @@ iframe.photo-container {
 	
 	.col-container > a.nav-icon {
 		display: none;
+	}
+	
+	#nav-menu a:hover, a.nav-icon:hover, #photo-container-expand a.nav-arrow:hover {
+		background-color: #ddd;
+		color: black;
+		opacity: 1.0;
 	}
 	
 }
