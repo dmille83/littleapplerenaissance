@@ -97,7 +97,7 @@ div#banner div {
 	color: white;
 	padding-left: 30px;
 }
-#nav-menu a:hover, a.nav-icon:hover, #photo-container-expand a.nav-arrow:hover {
+#nav-menu a:hover, a.nav-icon:hover {
 	background-color: #ddd;
 	color: black;
 	opacity: 1.0;

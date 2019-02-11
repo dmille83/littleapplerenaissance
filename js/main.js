@@ -47,8 +47,6 @@ function photoExpand(i) {
 	console.log(i + "/" + arr_photos.length);
 	var arrowLeft = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-left")[0];
 	var arrowRight = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-right")[0];
-	arrowLeft.blur();
-	arrowRight.blur();
 	if (i === null) {
 		document.getElementById("photo-container-expand").style.display = "none";
 	} else if (i < arr_photos.length) {
