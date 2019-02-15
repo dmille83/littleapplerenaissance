@@ -19,7 +19,7 @@ $timestamp = $date->format('ymdhis');
 <!-- Simulate a smartphone / tablet -->
 <div class="col-container">
 	
-	<div id="banner-backdrop" class="parchment-floral"></div>
+	<div id="banner-backdrop" class="parchment-floral-dark"></div>
 
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
@@ -52,7 +52,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: page below nav -->
 	<!-- Desktop: nav in column 1 page in column 2 -->
-	<div id="content-container" class="">
+	<div id="content-container" class="parchment-floral">
 		
 		<!-- Banner title -->
 		<div id="banner" class="" title="Little Apple Renaissance Festival">
