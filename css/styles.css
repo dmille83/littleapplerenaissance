@@ -97,7 +97,7 @@ div#banner div {
 	font-weight: bold;
 	font-size: 1.17em;
 }
-div#banner a::before { /*, div#banner::after */
+div#banner::before { /*, div#banner::after */
 	content: "";
 	position: absolute;
 	display: inline-block;
@@ -110,7 +110,7 @@ div#banner a::before { /*, div#banner::after */
 	background-size: auto calc(100% - 16px);
 	background-repeat: no-repeat;
 }
-div#banner a::before {
+div#banner::before {
 	left: 0px;
 }
 /*
