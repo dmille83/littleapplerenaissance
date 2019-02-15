@@ -19,8 +19,6 @@ $timestamp = $date->format('ymdhis');
 <!-- Simulate a smartphone / tablet -->
 <div class="col-container">
 	
-	<div id="banner-backdrop" class="parchment-floral-dark"></div>
-
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
 	<div id="nav-menu" class="col-mobile parchment">
@@ -45,16 +43,17 @@ $timestamp = $date->format('ymdhis');
 		<a href="https://www.facebook.com/LittleAppleRenFest" target=_blank>Facebook</a>
 		
 	</div>
-	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()">
+	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()" title="menu">
 		<i class="fa fa-bars"></i>
 	</a>
 	<!-- End: column 1 left -->
 	
 	<!-- Mobile: page below nav -->
 	<!-- Desktop: nav in column 1 page in column 2 -->
-	<div id="content-container" class="parchment-floral">
+	<div id="content-container" class="">
 		
 		<!-- Banner title -->
+		<div id="banner-backdrop" class=""></div>
 		<div id="banner" class="" title="Little Apple Renaissance Festival">
 			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"></a>
 			<a class="banner-desktop" href="/"></a>
