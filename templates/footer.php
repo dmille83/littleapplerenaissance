@@ -1,3 +1,4 @@
+		</div>
 		<!-- Page content end -->
 		
 	</div>

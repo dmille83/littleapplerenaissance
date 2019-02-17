@@ -21,7 +21,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
-	<div id="nav-menu" class="col-mobile parchment">
+	<div id="nav-menu" class="col-nav parchment">
 		
 		<a href="/">Home</a>
 		
@@ -50,7 +50,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: page below nav -->
 	<!-- Desktop: nav in column 1 page in column 2 -->
-	<div id="content-container" class="">
+	<div class="col-page">
 		
 		<!-- Banner title -->
 		<div id="banner-backdrop" class=""></div>
@@ -61,3 +61,4 @@ $timestamp = $date->format('ymdhis');
 		</div>
 		
 		<!-- Page content start -->
+		<div id="content-container">
