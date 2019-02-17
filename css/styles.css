@@ -37,7 +37,7 @@ form table tr td {
 	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=4');
 	background-position: left top;
 }
-div#banner-backdrop::after, #content-container::after {
+div#banner-backdrop::after { /*#content-container::after*/
 	content: "";
 	position: absolute;
 	top: 0;
@@ -46,13 +46,11 @@ div#banner-backdrop::after, #content-container::after {
 	right: 0;
 	z-index: -1;
 }
+/*
 #content-container::after {
 	opacity: 0.3;
-	/*
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	*/
 }
+*/
 
 div.loading {
 	margin-top: 100px;
@@ -155,8 +153,8 @@ div#banner::after {
 a.nav-icon {
 	background-color: black;
 	color: white;
-	font-size: 17px;
-	padding: 14px 16px;
+	font-size: 37px;
+	padding: 10px 16px;
 	display: block;
 	position: absolute;
 	right: 0;
