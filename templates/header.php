@@ -21,7 +21,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
-	<div id="nav-menu" class="col-mobile">
+	<div id="nav-menu" class="col-mobile parchment">
 		
 		<a href="/">Home</a>
 		

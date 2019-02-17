@@ -77,8 +77,31 @@ div.loading {
 #banner-backdrop {
 	position: absolute;
 	top:0;left:0;right:0;
-	height: 316px;
+	height: 300px;
 }
+div#banner-backdrop::before { /*, div#banner::after */
+	content: "";
+	position: absolute;
+	display: inline-block;
+	height: 100%;
+	width: auto;
+	right: 0px;
+	bottom: 0px;
+	//background-image: url('../img/corner-border-vine-green.png?v=1');
+	background-image: url('../img/littleback3-2.png?v=1');
+	background-position: left bottom;
+	background-size: auto calc(100% - 16px);
+	background-repeat: no-repeat;
+}
+div#banner-backdrop::before {
+	left: 0px;
+}
+/*
+div#banner-backdrop::after {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+*/
 div#banner {
 	text-align: center;
 	position: relative;
@@ -100,28 +123,6 @@ div#banner div {
 	font-weight: bold;
 	font-size: 1.17em;
 }
-div#banner::before { /*, div#banner::after */
-	content: "";
-	position: absolute;
-	display: inline-block;
-	height: 100%;
-	width: auto;
-	right: 0px;
-	bottom: 0px;
-	background-image: url('../img/corner-border-vine-green.png?v=1');
-	background-position: left bottom;
-	background-size: auto calc(100% - 16px);
-	background-repeat: no-repeat;
-}
-div#banner::before {
-	left: 0px;
-}
-/*
-div#banner::after {
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-}
-*/
 
 #nav-menu {
 	position:absolute;
