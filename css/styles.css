@@ -1,3 +1,4 @@
+/*** GENERAL CSS ***/
 html, body {
 	font-family: Arial, Helvetica, sans-serif;
 	width: 100%;
@@ -25,42 +26,7 @@ form table tr td {
 	text-align: left;
 }
 
-/*** BACKGROUND IMAGES ***/
-.parchment, .parchment-floral, div#banner-backdrop::after, .col-page::after {
-	background-color: white;
-	background-image: url('../img/floral-old-paper-or-parchment-dark.jpg?v=3');
-	background-position: right top;
-	background-size: 100% auto;
-	background-repeat: repeat;
-}
-.parchment  {
-	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=4');
-	background-position: left top;
-}
-div#banner-backdrop::after, .col-page::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: -1;
-}
-.col-page::after {
-	opacity: 0.2;
-}
-
-div.loading {
-	margin-top: 100px;
-	width: 100%;
-	height: 10px;
-	background: transparent;
-	background-image: url('../img/loading.gif?v=1');
-	background-position: center;
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-}
-
+/*** PAGE LAYOUT ***/
 .col-container {
 	display: table;
 	width: 100%;
@@ -73,16 +39,20 @@ div.loading {
 	vertical-align: top;
 	min-width: 200px;
 }
-
 .col-nav {
 	font-size: 17px;
-	background-color: #333;
-}
-.col-nav a, .col-nav div {
 	color: white;
+	background-color: #993924;
+}
+.col-page {
+	min-height: 100%;
+}
+
+/*** NAVIGATION ***/
+.col-nav div, .col-nav a {
+	display: block;
 	padding: 14px 16px;
 	text-decoration: none;
-	display: block;
 }
 .col-nav div {
 	font-weight: bold;
@@ -93,7 +63,7 @@ div.loading {
 }
 
 a.nav-icon {
-	background-color: black;
+	background-color: #993924;
 	color: white;
 	font-size: 37px;
 	padding: 10px 16px;
@@ -103,66 +73,64 @@ a.nav-icon {
 	top: 0;
 	font-weight: bold;
 	text-decoration: none;
-}
-
-.col-page {
-	min-height: 100%;
+	border-radius: 0px 0px 0px 10px;
 }
 
 #content-container {
 	padding: 0px 16px 16px 16px;
 }
 
-#banner-backdrop {
-	position: absolute;
-	top:0;left:0;right:0;
-	height: 300px;
-}
-div#banner-backdrop::before { /*, div#banner::after */
-	content: "";
-	position: absolute;
-	display: inline-block;
-	height: 100%;
-	width: auto;
-	right: 0px;
-	bottom: 0px;
-	//background-image: url('../img/corner-border-vine-green.png?v=1');
-	background-image: url('../img/littleback3-2.png?v=1');
-	background-position: left bottom;
-	background-size: auto calc(100% - 16px);
-	background-repeat: no-repeat;
-}
-div#banner-backdrop::before {
-	left: 0px;
-}
-/*
-div#banner-backdrop::after {
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-}
-*/
+/*** BANNER ***/
 div#banner {
 	text-align: center;
 	position: relative;
 	display: inline-block;
 	width: 100%;
 	height: 300px;
-	margin-bottom: 10px;
 }
-div#banner a {
+div#banner a, div#banner div, div#banner div::before, div#banner div::after {
 	position: absolute;
 	top:0;bottom:0;left:0;right:0;
+}
+div#banner a {
 	background-image: url('../img/banner-color.png?v=5');
 	background-position: center;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 }
-div#banner div {
-	text-align: left;
-	font-weight: bold;
-	font-size: 1.17em;
+div#banner div::before, div#banner div::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	background-image: url('../img/littleback3-2.png?v=1');
+	background-position: left bottom;
+	background-size: auto calc(100% - 16px);
+	background-repeat: no-repeat;
+}
+div#banner div::after {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
 }
 
+/*** BACKGROUND IMAGES ***/
+.parchment, .parchment-floral {
+	background-color: white;
+	//background-image: url('../img/parchment-kjpargeter-freepik.jpg?v=4');
+	//background-image: url('../img/floral-old-paper-or-parchment-banner.jpg?v=4');
+	background-image: url('../img/floral-old-paper-or-parchment-banner.jpg?v=1');
+	background-position: left top;
+	background-size: auto 100%;
+	background-repeat: repeat;
+}
+.parchment  {
+	background-image: url('../img/parchment-kjpargeter-freepik-narrow.jpg?v=4');
+	background-position: left top;
+}
+.bg-red {
+	background-color: #993924;
+}
+
+/*** PHOTO GALLERY ***/
 iframe.photo-container {
 	display: inline-block;
 	border: none;
@@ -172,7 +140,6 @@ iframe.photo-container {
 	min-height: 300px;
 	max-height: 600px;
 }
-
 .photo-container img {
 	display: inline-block;
 	margin: 0px 16px 16px 0px;
@@ -183,6 +150,7 @@ iframe.photo-container {
 	border: 1px solid #eee;
 }
 
+/*** PHOTO GALLERY EXPANDED WINDOW ***/
 #photo-container-expand {
 	position: fixed;
 	top: 0px;
@@ -210,11 +178,6 @@ iframe.photo-container {
 	height: auto;
 	max-width: calc(100% - 40px);
 }
-#photo-container-expand a.nav-icon {
-	width: 70px;
-	height: 40px;
-	padding: 20px 0px 0px 0px;
-}
 #photo-container-expand a.nav-arrow {
 	display: inline-block;
 	position: absolute;
@@ -229,30 +192,41 @@ iframe.photo-container {
 	text-decoration: none;
 	text-align: center;
 }
-#photo-container-expand a.nav-arrow:hover {
-	opacity: 1.0;
-}
 #photo-container-expand a.nav-arrow-left {
 	left: 0px;
 }
 #photo-container-expand a.nav-arrow-right {
 	right: 0px;
 }
+#photo-container-expand a.nav-exit {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	width: 70px;
+	height: 40px;
+	padding: 20px 0px 0px 0px;
+	font-size: 17px;
+}
 
 /*** MOBILE LAYOUT ***/
 @media only screen and (max-width: 600px) {
 	
-	div#banner .banner-desktop {
+	div#banner a.banner-desktop {
 		display: none;
 	}
 	
 	.col-nav {
-		background-image: url('');
 		position:absolute;
 		top: 0px;
 		left: 0px;
 		right: 0px;
 		display: none;
+		background-image: url('');
 	}
 	
 	.col-nav, .nav-icon, #photo-container-expand {
@@ -263,7 +237,7 @@ iframe.photo-container {
 		width: calc(100% - 16px);
 	}
 	
-	.col-nav a:hover {
+	.col-nav a:hover, #photo-container-expand a.nav-exit:hover {
 		background-color: #ddd;
 		color: black;
 		opacity: 1.0;
@@ -274,25 +248,18 @@ iframe.photo-container {
 /*** DESKTOP LAYOUT ***/
 @media only screen and (min-width: 601px) {
 	
-	div#banner a.banner-mobile {
+	div#banner a.banner-mobile, a.nav-icon {
 		display: none;
 	}
 	
 	.col-nav {
-		display: table-cell;
-		position:relative;
 		width: 200px;
 	}
-	
 	.col-page {
 		width: calc(100% - 200px);
 	}
 	
-	.col-container > a.nav-icon {
-		display: none;
-	}
-	
-	.col-nav a:hover, a.nav-icon:hover, #photo-container-expand a.nav-arrow:hover {
+	.col-nav a:hover, a.nav-icon:hover, #photo-container-expand a.nav-exit:hover, #photo-container-expand a.nav-arrow:hover {
 		background-color: #ddd;
 		color: black;
 		opacity: 1.0;

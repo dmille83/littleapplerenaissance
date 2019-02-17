@@ -21,7 +21,7 @@ $timestamp = $date->format('ymdhis');
 	
 	<!-- Mobile: top nav-menu menu -->
 	<!-- Desktop: column 1 left -->
-	<div id="nav-menu" class="col-nav parchment">
+	<div id="nav-menu" class="col-nav">
 		
 		<a href="/">Home</a>
 		
@@ -53,11 +53,11 @@ $timestamp = $date->format('ymdhis');
 	<div class="col-page">
 		
 		<!-- Banner title -->
-		<div id="banner-backdrop" class=""></div>
-		<div id="banner" class="" title="Little Apple Renaissance Festival">
+		<div id="banner" class="parchment-floral" title="Little Apple Renaissance Festival">
+			<div></div>
 			<a class="banner-mobile" href="javascript:void(0);" onclick="navMenu()"></a>
 			<a class="banner-desktop" href="/"></a>
-			<!--<div>Little Apple Renaissance Festival</div>-->
+			<!--<h3>Little Apple Renaissance Festival</h3>-->
 		</div>
 		
 		<!-- Page content start -->

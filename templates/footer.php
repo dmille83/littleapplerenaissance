@@ -13,7 +13,7 @@
 	<img id="photo-frame">
 	<a class="nav-arrow nav-arrow-left" href="javascript:void(0);" title="Previous Photo" onclick="photoExpand(null)"><div>&lt;</div></a>
 	<a class="nav-arrow nav-arrow-right" href="javascript:void(0);" title="Next Photo" onclick="photoExpand(null)"><div>&gt;</div></a>
-	<a class="nav-icon" href="javascript:void(0);" title="Minimize" onclick="photoExpand(null)">X</a>
+	<a class="nav-exit" href="javascript:void(0);" title="Minimize" onclick="photoExpand(null)">X</a>
 </div>
 
 </body>
