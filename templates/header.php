@@ -6,13 +6,20 @@ $timestamp = $date->format('ymdhis');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Little Apple Renaissance Festival</title>
-<link rel="shortcut icon" href="img/bookmark.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<link rel="stylesheet" href="/css/styles.css?v=<?php echo $timestamp; ?>">
-<script src="/js/main.js?v=<?php echo $timestamp; ?>"></script>
+	<title>Little Apple Renaissance Festival</title>
+	<link rel="shortcut icon" href="img/bookmark.ico">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Little Apple Renaissance Festival">
+	<meta name="author" content="Ann Warren, Dane Miller">
+	
+	<meta name="keywords" content="Kansas, Manhattan, Little Apple, Renaissance, Ren Fest, Ren Fair, Festival, Fair, Italy, Italian">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="/css/styles.css?v=<?php echo $timestamp; ?>">
+	<script src="/js/main.js?v=<?php echo $timestamp; ?>"></script>
+	
 </head>
 <body>
 
