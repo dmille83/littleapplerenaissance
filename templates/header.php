@@ -13,7 +13,7 @@ $timestamp = $date->format('ymdhis');
 	<meta name="description" content="Little Apple Renaissance Festival">
 	<meta name="author" content="Ann Warren, Dane Miller">
 	
-	<meta name="keywords" content="Kansas, Manhattan, Little Apple, Renaissance, Ren Fest, Ren Fair, Festival, Fair, Italy, Italian">
+	<meta name="keywords" content="Kansas, KS, Manhattan, Little Apple, Renaissance, Ren Fest, Ren Fair, Festival, Fair, Italy, Italian">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
