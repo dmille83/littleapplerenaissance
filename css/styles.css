@@ -234,7 +234,7 @@ iframe.photo-container {
 	}
 	
 	.photo-container img {
-		width: calc(100% - 16px);
+		width: 100%;
 	}
 	
 	.col-nav a:hover, #photo-container-expand a.nav-exit:hover {
