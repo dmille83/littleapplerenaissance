@@ -93,7 +93,7 @@ div#banner a, div#banner div, div#banner div::before, div#banner div::after {
 	top:0;bottom:0;left:0;right:0;
 }
 div#banner a {
-	background-image: url('../img/banner-color.png?v=5');
+	background-image: url('../img/banner-color-2.png?v=5');
 	background-position: center;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
@@ -102,7 +102,7 @@ div#banner div::before, div#banner div::after {
 	content: "";
 	position: absolute;
 	display: inline-block;
-	background-image: url('../img/littleback3-4.png?v=1');
+	background-image: url('../img/littleback3-7.png?v=1');
 	background-position: left bottom;
 	background-size: auto calc(100% - 16px);
 	background-repeat: no-repeat;
