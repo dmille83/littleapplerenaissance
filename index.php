@@ -17,6 +17,7 @@ if (file_exists("pages/$action.html")) {
 }
 
 //include("templates/countlog.php");
+include("templates/counter.html");
 
 include("templates/footer.php");
 ?>
