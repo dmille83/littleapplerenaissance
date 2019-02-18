@@ -29,7 +29,7 @@ CONS:	alphabetical with no custom sorting (yet)
 		foreach($dom->getElementsByTagName('img') as $link) {
 			$img_src = $link->getAttribute('src');
 			$img_title = $link->getAttribute('title');
-			if (strpos($img_src, 'type/image/jpeg') == false) {
+			if (strpos($img_src, '/type/image/') == false) {
 				echo '<img data-src="' . str_replace('=s190', '=s1080', $img_src) . '" title="' . $img_title . '" src="" alt="">';
 			}
 		}
