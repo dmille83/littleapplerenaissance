@@ -102,14 +102,14 @@ div#banner div::before, div#banner div::after {
 	content: "";
 	position: absolute;
 	display: inline-block;
-	background-image: url('../img/littleback3-2.png?v=1');
+	background-image: url('../img/littleback3-4.png?v=1');
 	background-position: left bottom;
 	background-size: auto calc(100% - 16px);
 	background-repeat: no-repeat;
 }
 div#banner div::after {
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
+	-webkit-transform: scale(-1, -1);
+	transform: scale(-1, -1);
 }
 
 /*** BACKGROUND IMAGES ***/
