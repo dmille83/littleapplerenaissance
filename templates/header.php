@@ -1,11 +1,21 @@
-<?php
-$date = new DateTime();
-$timestamp = $date->format('ymdhis');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134815320-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-134815320-1');
+	</script>
+	
+	<?php
+	$date = new DateTime();
+	$timestamp = $date->format('ymdhis');
+	?>
+	
 	<title>Little Apple Renaissance Festival</title>
 	<link rel="shortcut icon" href="img/bookmark.ico">
 	
