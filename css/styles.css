@@ -168,7 +168,7 @@ iframe.photo-container {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 #photo-container-expand #photo-title {
 	position: absolute;
