@@ -13,8 +13,8 @@
 		<div id="photo-title"></div>
 		<img id="photo-expanded">
 	</div>
-	<a class="nav-arrow nav-arrow-left" href="javascript:void(0);" title="Previous Photo" onclick="photoNav(-1);"><div>&lt;</div></a>
-	<a class="nav-arrow nav-arrow-right" href="javascript:void(0);" title="Next Photo" onclick="photoNav(1);"><div>&gt;</div></a>
+	<a class="nav-arrow nav-arrow-left" href="javascript:void(0);" title="Previous Photo" onclick="photoNav(-1);"></a>
+	<a class="nav-arrow nav-arrow-right" href="javascript:void(0);" title="Next Photo" onclick="photoNav(1);"></a>
 	<a class="nav-exit" href="javascript:void(0);" title="Minimize" onclick="photoExpand(null);">X</a>
 </div>
 

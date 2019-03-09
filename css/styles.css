@@ -194,11 +194,27 @@ iframe.photo-container {
 	width: 70px;
 	padding-top: 30%;
 	background-color: rgba(0, 0, 0, 0.0);
-	color: #ccc;
+	color: white;
 	font-size: 40px;
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
+}
+#photo-container-expand a.nav-arrow::before {
+	content: ">";
+	background-color: rgba(0, 0, 0, 0.15);
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	padding: 20px 0px 0px 0px;
+	font-size: 17px;
+	border-radius: 35px;
+}
+#photo-container-expand a.nav-arrow-left::before {
+	content: "<";
 }
 #photo-container-expand a.nav-arrow-left {
 	left: 0px;
