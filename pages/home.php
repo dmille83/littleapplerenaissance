@@ -11,8 +11,6 @@
 </p>
 <p><strong>Admission to this event is free!</strong></p>
 
-<?php
-// LOAD FILES FROM A GOOGLE DRIVE FOLDER AS A PHOTO ALBUM
-$gdrive_folder_id = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';
-include("templates/photos_gdrive.php");
-?>
+<div class="photo-container" title="click on a photo to expand">
+	<?php loadPhotosGDrive('1XtoXy34BvHQZGtFGuC7QQARLcz27EIws'); ?>
+</div>

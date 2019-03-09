@@ -1,5 +1,5 @@
 var arr_photos = [];
-var arr_photos_idx = 0;
+var arr_photos_idx = null;
 
 function navMenu() {
 	var x = document.getElementById("nav-menu");
@@ -35,23 +35,26 @@ window.onload = (function(){
 		for (var i = 0; i < elements.length; i++) {
 			arr_photos[i] = elements[i];
 			(function(i){
-				//elements[i].onclick = function(){ photoExpand(i); };
 				elements[i].addEventListener('click', function(){ photoExpand(i); });
 			})(i)
 		}
 	}
+	window.onkeydown = function(){ checkKey(); };
 	
 });
 
 function photoExpand(i) {
-	console.log(i + "/" + arr_photos.length);
 	var arrowLeft = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-left")[0];
 	var arrowRight = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-right")[0];
 	if (i === null) {
+		arr_photos_idx = null;
 		document.getElementById("photo-container-expand").style.display = "none";
-	} else if (i < arr_photos.length) {
+		document.body.style.overflow = "";
+	} else if (i < arr_photos.length && i >= 0) {
 		arr_photos_idx = i;
+		console.log("photo " + (i+1) + "/" + arr_photos.length);
 		var element = arr_photos[i];
+		document.body.style.overflow = "hidden";
 		document.getElementById("photo-container-expand").style.display = "block";
 		document.getElementById("photo-frame").src = element.src;
 		document.getElementById("photo-frame").title = element.title;
@@ -69,4 +72,22 @@ function photoExpand(i) {
 			arrowRight.onclick = function(){ photoExpand(i + 1); };
 		}
 	}
+}
+
+function checkKey(e) {
+	e = e || window.event;
+	
+	var bPhotos = false;
+	if (arr_photos_idx !== null) bPhotos = true;
+	
+	// left arrow
+    if (e.keyCode == '37') {
+		if (bPhotos == true) photoExpand(arr_photos_idx - 1);
+    }
+	
+	// right arrow
+    if (e.keyCode == '39') {
+		if (bPhotos == true) photoExpand(arr_photos_idx + 1);
+    }
+	
 }
