@@ -41,8 +41,8 @@ window.onload = (function(){
 		}
 	}
 	if (elementsContainer.length > 0) {
-		//var element = document.getElementById("photo-container-expand");
-		var element = document.getElementById("photo-expanded");
+		var element = document.getElementById("photo-container-expand");
+		//var element = document.getElementById("photo-expanded");
 		detectswipe(element, handleswipe);
 		window.onkeydown = function(){ checkKey(); };
 	}
