@@ -106,12 +106,20 @@ function checkKey(e) {
 }
 
 function handleswipe(el, direc) {
+	
 	// swiped right
 	if (direc === "r") {
 		photoNav(-1);
 	}
+	
 	// swiped left
 	if (direc === "l") {
 		photoNav(1);
 	}
+	
+	// swiped down
+	if (direc === "l") {
+		photoExpand(null);
+	}
+	
 }
