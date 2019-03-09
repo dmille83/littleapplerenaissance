@@ -1,9 +1,9 @@
 var arr_photos = [];
 var arr_photos_idx = null;
 
-function navMenu() {
+function navMenu(c) {
 	var x = document.getElementById("nav-menu");
-	if (x.style.display === "table-cell") {
+	if (x.style.display === "table-cell" || c === true) {
 		x.style.display = "";
 	} else {
 		x.style.display = "table-cell";
@@ -42,7 +42,7 @@ window.onload = (function(){
 	}
 	if (elementsContainer.length > 0) {
 		//var element = document.getElementById("photo-container-expand");
-		var element = document.getElementById("photo-frame");
+		var element = document.getElementById("photo-expanded");
 		detectswipe(element, handleswipe);
 		window.onkeydown = function(){ checkKey(); };
 	}
@@ -62,8 +62,8 @@ function photoExpand(i) {
 		var element = arr_photos[i];
 		document.body.style.overflow = "hidden";
 		document.getElementById("photo-container-expand").style.display = "block";
-		document.getElementById("photo-frame").src = element.src;
-		document.getElementById("photo-frame").title = element.title;
+		document.getElementById("photo-expanded").src = element.src;
+		document.getElementById("photo-expanded").title = element.title;
 		document.getElementById("photo-title").innerHTML = element.title;
 		if (i == 0) {
 			arrowLeft.style.display = "none";
@@ -86,6 +86,12 @@ function photoNav(d) {
 
 function checkKey(e) {
 	e = e || window.event;
+	
+	// escape
+	if (e.keyCode == '27') {
+		photoExpand(null);
+		navMenu(true);
+    }
 	
 	// left arrow
     if (e.keyCode == '37') {
