@@ -5,7 +5,7 @@ function detectswipe(el,func) {
 	
 	//var min_x = 30;	//min x swipe for horizontal swipe
 	var max_x = 30;		//max x difference for vertical swipe
-	//var min_y = 50;	//min y swipe for vertical swipe
+	var min_y = 50;	//min y swipe for vertical swipe
 	var max_y = 60;		//max y difference for horizontal swipe
 	
 	var direc = "";
@@ -24,7 +24,7 @@ function detectswipe(el,func) {
 		
 		// I'd recommend to set min_x dynamically, because when you swipe 400px up and only 40px right, you probably intend to swipe up.
 		var min_x = Math.abs(swipe_det.eY - swipe_det.sY);	//min x swipe for horizontal swipe
-		var min_y = Math.abs(swipe_det.eX - swipe_det.sX);	//min y swipe for vertical swipe
+		//var min_y = Math.abs(swipe_det.eX - swipe_det.sX);	//min y swipe for vertical swipe
 		
 		//horizontal detection
 		if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y) && (swipe_det.eX > 0)))) {
