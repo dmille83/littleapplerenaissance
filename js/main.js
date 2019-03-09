@@ -118,7 +118,7 @@ function handleswipe(el, direc) {
 	}
 	
 	// swiped down
-	if (direc === "l") {
+	if (direc === "d") {
 		photoExpand(null);
 	}
 	
