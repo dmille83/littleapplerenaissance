@@ -192,8 +192,8 @@ iframe.photo-container {
 	bottom: 0px;
 	width: 70px;
 	padding-top: 30%;
-	background-color: rgba(0, 0, 0, 0.3);
-	color: white;
+	background-color: rgba(0, 0, 0, 0.0);
+	color: #ccc;
 	font-size: 40px;
 	font-weight: bold;
 	text-decoration: none;
@@ -203,7 +203,7 @@ iframe.photo-container {
 	left: 0px;
 }
 #photo-container-expand a.nav-arrow-right {
-	right: 0px;
+	right: 1px;
 }
 #photo-container-expand a.nav-exit {
 	display: block;
