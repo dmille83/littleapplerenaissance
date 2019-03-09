@@ -168,7 +168,7 @@ iframe.photo-container {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 #photo-container-expand #photo-title {
 	position: absolute;
@@ -181,9 +181,10 @@ iframe.photo-container {
 	text-align: center;
 }
 #photo-container-expand img {
-	margin: 20px 0px 0px 0px;
+	//margin: 20px 0px 0px 0px;
+	//max-width: calc(100% - 40px);
+	max-width: 100%;
 	height: auto;
-	max-width: calc(100% - 40px);
 }
 #photo-container-expand a.nav-arrow {
 	display: inline-block;
@@ -208,16 +209,17 @@ iframe.photo-container {
 #photo-container-expand a.nav-exit {
 	display: block;
 	position: absolute;
-	right: 0;
-	top: 0;
-	background-color: black;
+	right: 5px;
+	top: 5px;
+	background-color: rgba(0, 0, 0, 0.15);
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
-	width: 70px;
+	width: 60px;
 	height: 40px;
 	padding: 20px 0px 0px 0px;
 	font-size: 17px;
+	border-radius: 35px;
 }
 
 /*** MOBILE LAYOUT ***/
