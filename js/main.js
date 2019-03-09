@@ -29,17 +29,23 @@ window.onload = (function(){
 	});
 	
 	// Add event listeners to the photo gallery
-	var elements = document.getElementsByClassName("photo-container")
-	if (elements.length > 0) {
-		var elements = elements[0].getElementsByTagName('img');
+	var elementsContainer = document.getElementsByClassName("photo-container")
+	for (var j = 0; j < elementsContainer.length; j++) {
+		
+		var elements = elementsContainer[j].getElementsByTagName('img');
 		for (var i = 0; i < elements.length; i++) {
 			arr_photos[i] = elements[i];
 			(function(i){
-				elements[i].addEventListener('click', function(){ photoExpand(i); });
+				arr_photos[i].addEventListener('click', function(){ photoExpand(i); });
 			})(i)
 		}
 	}
-	window.onkeydown = function(){ checkKey(); };
+	if (elementsContainer.length > 0) {
+		//var element = document.getElementById("photo-container-expand");
+		var element = document.getElementById("photo-frame");
+		detectswipe(element, handleswipe);
+		window.onkeydown = function(){ checkKey(); };
+	}
 	
 });
 
@@ -63,31 +69,43 @@ function photoExpand(i) {
 			arrowLeft.style.display = "none";
 		} else {
 			arrowLeft.style.display = "";
-			arrowLeft.onclick = function(){ photoExpand(i - 1); };
 		}
 		if (i == (arr_photos.length - 1)) {
 			arrowRight.style.display = "none";
 		} else {
 			arrowRight.style.display = "";
-			arrowRight.onclick = function(){ photoExpand(i + 1); };
 		}
+	}
+}
+
+function photoNav(d) {
+	if (arr_photos_idx !== null) {
+		photoExpand(arr_photos_idx + d);
 	}
 }
 
 function checkKey(e) {
 	e = e || window.event;
 	
-	var bPhotos = false;
-	if (arr_photos_idx !== null) bPhotos = true;
-	
 	// left arrow
     if (e.keyCode == '37') {
-		if (bPhotos == true) photoExpand(arr_photos_idx - 1);
+		photoNav(-1);
     }
 	
 	// right arrow
     if (e.keyCode == '39') {
-		if (bPhotos == true) photoExpand(arr_photos_idx + 1);
+		photoNav(1);
     }
 	
+}
+
+function handleswipe(el, direc) {
+	// swiped right
+	if (direc === "r") {
+		photoNav(-1);
+	}
+	// swiped left
+	if (direc === "l") {
+		photoNav(1);
+	}
 }
