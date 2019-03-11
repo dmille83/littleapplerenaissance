@@ -22,6 +22,8 @@ function detectswipe(el,func) {
 	},false);
 	el.addEventListener('touchend',function(e){
 		
+		//alert( (swipe_det.sX - swipe_det.eX) + "," + (swipe_det.sY - swipe_det.eY) );
+		
 		// I'd recommend to set min_x dynamically, because when you swipe 400px up and only 40px right, you probably intend to swipe up.
 		var min_x = Math.abs(swipe_det.eY - swipe_det.sY);	//min x swipe for horizontal swipe
 		//var min_y = Math.abs(swipe_det.eX - swipe_det.sX);	//min y swipe for vertical swipe

@@ -26,7 +26,7 @@
 	<meta name="keywords" content="Kansas, KS, Manhattan, Little Apple, Renaissance, Ren Fest, Ren Fair, Festival, Fair, Italy, Italian, Calendar, Manhattan Calendar, Little Apple Calendar, Events, Manhattan Events, Little Apple Events">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css?v=<?php echo $timestamp; ?>">
 	<script src="/js/swipe.js?v=<?php echo $timestamp; ?>"></script>
 	<script src="/js/main.js?v=<?php echo $timestamp; ?>"></script>
