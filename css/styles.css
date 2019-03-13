@@ -191,18 +191,20 @@ div#banner div::after {
 	text-decoration: none;
 	text-align: center;
 }
-#photo-container-expand a.nav-arrow::before {
-	content: ">";
-	background-color: rgba(0, 0, 0, 0.15);
+#photo-container-expand a.nav-arrow::before, #photo-container-expand a.nav-exit {
+	background-color: rgba(0, 0, 0, 0.20);
 	color: white;
 	font-weight: bold;
 	text-decoration: none;
-	display: inline-block;
 	width: 60px;
 	height: 40px;
 	padding: 20px 0px 0px 0px;
 	font-size: 17px;
 	border-radius: 35px;
+}
+#photo-container-expand a.nav-arrow::before {
+	content: ">";
+	display: inline-block;
 }
 #photo-container-expand a.nav-arrow-left::before {
 	content: "<";
@@ -218,15 +220,6 @@ div#banner div::after {
 	position: absolute;
 	right: 5px;
 	top: 5px;
-	background-color: rgba(0, 0, 0, 0.15);
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-	width: 60px;
-	height: 40px;
-	padding: 20px 0px 0px 0px;
-	font-size: 17px;
-	border-radius: 35px;
 }
 
 /*** MOBILE LAYOUT ***/
