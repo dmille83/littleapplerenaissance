@@ -9,8 +9,8 @@ function detectswipe(el,func) {
 	function detectswipexy() {
 		var x = swipe_det.eX - swipe_det.sX;
 		var y = swipe_det.eY - swipe_det.sY;
-		if (Math.abs(x) < min_x) x = 0;
-		if (Math.abs(y) < min_y) y = 0;
+		//if (Math.abs(x) < min_x) x = 0;
+		//if (Math.abs(y) < min_y) y = 0;
 		if (Math.abs(x) > Math.abs(y)) y = 0;
 		else x = 0;
 		var v = new Object();
@@ -60,6 +60,9 @@ function detectswipe(el,func) {
 		var v = detectswipexy();
 		//alert( "x: " + v.x + "\ny: " + v.y );
 		//alert( "x: " + (swipe_det.sX - swipe_det.eX) + "\ny: " + (swipe_det.sY - swipe_det.eY) );
+		
+		if (Math.abs(v.x) < min_x) v.x = 0;
+		if (Math.abs(v.y) < min_y) v.y = 0;
 		
 		// Direction detection
 		if(v.x > 0) direc = "r";
