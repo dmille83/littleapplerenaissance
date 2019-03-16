@@ -93,7 +93,7 @@ div#banner a, div#banner div, div#banner div::before, div#banner div::after {
 	top:0;bottom:0;left:0;right:0;
 }
 div#banner a {
-	background-image: url('../img/banner-color-3.png?v=5');
+	background-image: url('../img/banner-color.png?v=0');
 	background-position: center;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
@@ -102,7 +102,7 @@ div#banner div::before, div#banner div::after {
 	content: "";
 	position: absolute;
 	display: inline-block;
-	background-image: url('../img/littleback3-8.png?v=1');
+	background-image: url('../img/vines-color.png?v=0');
 	background-position: left bottom;
 	background-size: auto calc(100% - 16px);
 	background-repeat: no-repeat;
@@ -115,8 +115,6 @@ div#banner div::after {
 /*** BACKGROUND IMAGES ***/
 .parchment, .parchment-floral {
 	background-color: white;
-	//background-image: url('../img/parchment-kjpargeter-freepik.jpg?v=4');
-	//background-image: url('../img/floral-old-paper-or-parchment-banner.jpg?v=4');
 	background-image: url('../img/floral-old-paper-or-parchment-banner.jpg?v=1');
 	background-position: left top;
 	background-size: auto 100%;
