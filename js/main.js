@@ -29,7 +29,7 @@ window.onload = (function(){
 	});
 	
 	// Add event listeners to the photo gallery
-	var elementsContainer = document.getElementsByClassName("photo-container")
+	var elementsContainer = document.getElementsByClassName("photo-container");
 	for (var j = 0; j < elementsContainer.length; j++) {
 		
 		var elements = elementsContainer[j].getElementsByTagName('img');
@@ -50,8 +50,6 @@ window.onload = (function(){
 });
 
 function photoExpand(i) {
-	var arrowLeft = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-left")[0];
-	var arrowRight = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-right")[0];
 	if (i === null) {
 		arr_photos_idx = null;
 		document.getElementById("photo-container-expand").style.display = "none";
@@ -59,12 +57,21 @@ function photoExpand(i) {
 	} else if (i < arr_photos.length && i >= 0) {
 		arr_photos_idx = i;
 		console.log("photo " + (i+1) + "/" + arr_photos.length);
+		
 		var element = arr_photos[i];
-		document.body.style.overflow = "hidden";
-		document.getElementById("photo-container-expand").style.display = "block";
-		document.getElementById("photo-expanded").src = element.src;
-		document.getElementById("photo-expanded").title = element.title;
-		document.getElementById("photo-title").innerHTML = element.title;
+		//$("#photo-expanded").hide(1, function(){
+		//	$("#photo-expanded").show(100);
+			
+			document.body.style.overflow = "hidden";
+			document.getElementById("photo-container-expand").style.display = "block";
+			document.getElementById("photo-expanded").src = element.src;
+			document.getElementById("photo-expanded").title = element.title;
+			document.getElementById("photo-title").innerHTML = element.title;
+			
+		//});
+		
+		var arrowLeft = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-left")[0];
+		var arrowRight = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-right")[0];
 		if (i == 0) {
 			arrowLeft.style.display = "none";
 		} else {
@@ -75,6 +82,7 @@ function photoExpand(i) {
 		} else {
 			arrowRight.style.display = "";
 		}
+		
 	}
 }
 

@@ -9,7 +9,7 @@
 
 <!-- Photo browsing window -->
 <div id="photo-container-expand">
-	<div class="photo-frame">
+	<div id="photo-frame">
 		<div id="photo-title"></div>
 		<img id="photo-expanded">
 	</div>
