@@ -59,8 +59,8 @@ function photoExpand(i) {
 		console.log("photo " + (i+1) + "/" + arr_photos.length);
 		
 		var element = arr_photos[i];
-		//$("#photo-expanded").hide(1, function(){
-		//	$("#photo-expanded").show(100);
+		$("#photo-expanded").hide(1, function(){
+			$("#photo-expanded").show(100);
 			
 			document.body.style.overflow = "hidden";
 			document.getElementById("photo-container-expand").style.display = "block";
@@ -68,7 +68,7 @@ function photoExpand(i) {
 			document.getElementById("photo-expanded").title = element.title;
 			document.getElementById("photo-title").innerHTML = element.title;
 			
-		//});
+		});
 		
 		var arrowLeft = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-left")[0];
 		var arrowRight = document.getElementById("photo-container-expand").getElementsByClassName("nav-arrow-right")[0];
