@@ -3,8 +3,8 @@ function detectswipe(el,func) {
 	swipe_det = new Object();
 	swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
 	
-	var min_x = 60;	//min x swipe for horizontal swipe
-	var min_y = 60;	//min y swipe for vertical swipe
+	var min_x = 60;		//min x swipe for horizontal swipe
+	var min_y = 120;	//min y swipe for vertical swipe
 	
 	function detectswipexy() {
 		var x = swipe_det.eX - swipe_det.sX;
