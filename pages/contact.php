@@ -1,10 +1,10 @@
 <?php 
 
 // WUFOO FORM
-loadWufooForm($config['photos']['wufoo']['contactus']['id']);
+loadWufooForm($config['photos']['wufoo']['contactus']);
 
 // GOOGLE FORM
-//loadGoogleForm($config['google']['forms']['contactus']['id'], $config['google']['forms']['contactus']['title'], '1100px');
+//loadGoogleForm($config['google']['forms']['contactus']);
 
 echo $config['contact']['p'];
 

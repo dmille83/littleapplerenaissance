@@ -51,12 +51,17 @@ $config['facebook']['a'] = '<a href="' . $config['facebook']['url'] . '" title="
 $config['facebook']['p'] = '<p>Find further details on Facebook at ' . $config['facebook']['a'] . '</p>';
 
 // WUFOO
-$config['photos']['wufoo']['contactus']['id'] = 'zdt3dk91fnpg50'; // Contact Us Form ID#
+$config['photos']['wufoo']['contactus']['id'] = 'zdt3dk91fnpg50';	// Contact Us Form ID#
+$config['photos']['wufoo']['contactus']['height'] = '640';
+$config['photos']['wufoo']['vendorapplication']['id'] = 'mo2dx3q0wgf8u5';	// Vendor Application Form ID#
+$config['photos']['wufoo']['vendorapplication']['height'] = '1576';
 
 // GOOGLE FORMS
-$config['google']['forms']['vendorapplication']['id'] = '1FAIpQLSem1CSeTHaGLiUwKE7hmeL0GIrjNtiD1qDhdtwMXB_XuQyUzQ';	// Vendor Application Form ID#
-$config['google']['forms']['vendorapplication']['title'] = 'Vendor Application Form';
 $config['google']['forms']['contactus']['id'] = '1FAIpQLSeBmlJzKbP3UbBng-kyL5fahgr_RscfY-TTzblCM9-Vxin1mw';			// Contact Us Form ID#
 $config['google']['forms']['contactus']['title'] = 'Contact Us Form';
+$config['google']['forms']['contactus']['height'] = '1100px';
+$config['google']['forms']['vendorapplication']['id'] = '1FAIpQLSem1CSeTHaGLiUwKE7hmeL0GIrjNtiD1qDhdtwMXB_XuQyUzQ';	// Vendor Application Form ID#
+$config['google']['forms']['vendorapplication']['title'] = 'Vendor Application Form';
+$config['google']['forms']['vendorapplication']['height'] = '640px';
 
 ?>

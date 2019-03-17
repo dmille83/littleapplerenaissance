@@ -1,6 +1,10 @@
 <?php
 
-loadGoogleForm($config['google']['forms']['vendorapplication']['id'], $config['google']['forms']['vendorapplication']['title'], '700px');
+// GOOGLE FORM
+//loadGoogleForm($config['google']['forms']['vendorapplication']);
+
+// WUFOO FORM
+loadWufooForm($config['photos']['wufoo']['vendorapplication']);
 
 echo $config['contact']['p'];
 
