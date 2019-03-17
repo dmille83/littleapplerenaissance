@@ -1,9 +1,16 @@
 <?php
-// Page Header
-include("templates/header.php");
+
+// Config Settings / Global Variables
+include("templates/config.php");
 
 // Photo Gallery Generator
-include("templates/photos_gdrive.php");
+include("templates/photos-gdrive.php");
+
+// Wufoo Form Loader
+include("templates/wufoo.php");
+
+// Page Header
+include("templates/header.php");
 
 // Load Current Page
 if (!empty($_GET['action'])) {
@@ -27,4 +34,5 @@ include("templates/counter.html");
 
 // Page Footer
 include("templates/footer.php");
+
 ?>

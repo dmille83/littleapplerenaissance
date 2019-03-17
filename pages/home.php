@@ -1,6 +1,6 @@
-<h3>Little Apple Renaissance Festival</h3>
+<?php echo $larf_header_h; ?>
 <p>Comes to town on October 19th - 20th at Manhattan City Park.</p>
-<p>Find us on Facebook at <a href="https://www.facebook.com/LittleAppleRenFest" title="Facebook" target=_blank>facebook.com/LittleAppleRenFest</a></p>
+<p>Find us on Facebook at <?php echo $larf_facebook_link; ?></p>
 <p><strong>Join us in Revelry</strong></p>
 <p>
 	<table border=0 class="padding-5">
@@ -9,8 +9,10 @@
 		<tr><td>Demonstrations</td><td>Performances</td></tr>
 	</table>
 </p>
-<p><strong>Admission to this event is free!</strong></p>
+<?php echo $larf_admission_p; ?>
 
-<div class="photo-container" title="click on a photo to expand">
-	<?php loadPhotosGDrive('1XtoXy34BvHQZGtFGuC7QQARLcz27EIws'); ?>
-</div>
+<?php
+	echo $photos_header;
+	loadPhotosGDrive('1XtoXy34BvHQZGtFGuC7QQARLcz27EIws');
+	echo $photos_footer;
+?>

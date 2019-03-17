@@ -7,7 +7,7 @@
 </div>
 <!-- End smartphone / tablet look -->
 
-<!-- Photo browsing window -->
+<!-- Photos expanded browsing window -->
 <div id="photo-container-expand">
 	<div id="photo-frame">
 		<div id="photo-title"></div>

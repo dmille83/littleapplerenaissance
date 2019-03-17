@@ -58,7 +58,7 @@
 		<div>FAQ</div>
 		<!--<a href="faq">FAQ</a>-->
 		<a href="contact">Contact Us</a>
-		<a href="https://www.facebook.com/LittleAppleRenFest" target=_blank>Facebook</a>
+		<a href="<?php echo $larf_facebook_url; ?>" target=_blank>Facebook</a>
 		
 	</div>
 	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()" title="menu">

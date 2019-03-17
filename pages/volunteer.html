@@ -1,18 +1,5 @@
 <h3>Volunteer at Event</h3>
-<div id="wufoo-zdt3dk91fnpg50">
-<script type="text/javascript">var zdt3dk91fnpg50;(function(d, t) {
-var s = d.createElement(t), options = {
-'userName':'littleapplerenfest',
-'formHash':'zdt3dk91fnpg50',
-'autoResize':true,
-'height':'640',
-'async':true,
-'host':'wufoo.com',
-'header':'show',
-'ssl':true};
-s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
-s.onload = s.onreadystatechange = function() {
-var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-try { zdt3dk91fnpg50 = new WufooForm();zdt3dk91fnpg50.initialize(options);zdt3dk91fnpg50.display(); } catch (e) {}};
-var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-})(document, 'script');</script>
+
+<?php loadWufooForm('zdt3dk91fnpg50'); ?>
+
+<?php echo $larf_contactinfo_p; ?>

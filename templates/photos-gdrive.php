@@ -17,17 +17,29 @@
 		data-link=""
 		data-title="Little Apple Ren Fest"
 		data-description="Album by Little Apple Ren Fest">
+		<?php loadPhotosGDrive('1XtoXy34BvHQZGtFGuC7QQARLcz27EIws'); ?>
+		<?php loadPhotosGDrive('17n-iswLPlotLuCsP2t70a7KDK2Indi2m'); ?>
 	</div>
 	
 	<div class="photo-container" title="click on a photo to expand">
+		<?php loadPhotosGDrive('1XtoXy34BvHQZGtFGuC7QQARLcz27EIws'); ?>
 		<?php loadPhotosGDrive('17n-iswLPlotLuCsP2t70a7KDK2Indi2m'); ?>
 	</div>
 
 ***/
 
+// PHOTO GALLERY WRAPPER ELEMENTS
+$photos_header='<div class="photo-container" title="click on a photo to expand">';
+$photos_footer='</div>';
+
+// CONSTRUCT THE URL FOR THE PUBLIC GRID PAGE
+function getPhotosGDriveUrl($gdrive_folder_id) {
+	return 'https://drive.google.com/embeddedfolderview?id=' . $gdrive_folder_id . '#grid';
+}
+
+// READ THE PUBLIC GRID PAGE AND PARSE THE IMAGE URLS
 function loadPhotosGDrive($gdrive_folder_id) {
-	// FIND THE IMAGE URLS
-	$url = 'https://drive.google.com/embeddedfolderview?id=' . $gdrive_folder_id . '#grid';
+	$url = getPhotosGDriveUrl($gdrive_folder_id);
 	$page = file_get_contents($url);
 	$dom = new DOMDocument;
 	libxml_use_internal_errors(true);
