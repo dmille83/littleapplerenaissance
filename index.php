@@ -4,10 +4,13 @@
 include("templates/config.php");
 
 // Photo Gallery Generator
-include("templates/photos-gdrive.php");
+include("templates/photos-google-drive.php");
+
+// Google Form Loader
+include("templates/forms-google-forms.php");
 
 // Wufoo Form Loader
-include("templates/wufoo.php");
+include("templates/forms-wufoo.php");
 
 // Page Header
 include("templates/header.php");

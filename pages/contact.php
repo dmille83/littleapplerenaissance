@@ -1,5 +1,11 @@
-<div>&nbsp;</div>
+<?php 
 
-<?php loadWufooForm($config['photos']['wufoo']['contactus']['id']); ?>
+// WUFOO FORM
+//loadWufooForm($config['photos']['wufoo']['contactus']['id']);
 
-<?php echo $config['contact']['p']; ?>
+// GOOGLE FORM
+loadGoogleForm($config['google']['forms']['contactus']['id'], $config['google']['forms']['contactus']['title'], '1100px');
+
+echo $config['contact']['p'];
+
+?>

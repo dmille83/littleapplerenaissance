@@ -14,18 +14,36 @@
  *	id		id# of an external resource, such as a form
 */
 
-// HEADER H3 ELEMENT DEFAULT
-$config['company']['name'] = 'Little Apple Renaissance Festival';
-$config['company']['h'] = '<h3>' . $config['company']['name'] . '</h3>';
+/*** GENERAL SETTINGS ***/
 
 // RECURRING HTML PAGE ELEMENTS
 $config['html']['page-break'] = '<div class="page-break"></div>';
+
+
+/*** INTERNAL INFO ***/
+
+// COMPANY
+$config['company']['name'] = 'Little Apple Renaissance Festival';
+$config['company']['h'] = '<h3>' . $config['company']['name'] . '</h3>';
 
 // CONTACT INFO
 $config['phone']['a'] = '<a href="tel:+1-913-547-1653">(913) 547-1653</a>';
 $config['email']['url'] = 'littleapplerenfest@gmail.com';
 $config['email']['a'] = '<a href="mailto:' . $config['email']['url'] . '">' . $config['email']['url'] . '</a>';
 $config['contact']['p'] = $config['html']['page-break'] . '<p>Questions? We may also be reached at ' . $config['phone']['a'] . ' or at ' . $config['email']['a'] . '</p>';
+
+// CALENDAR
+$config['calendar']['p'] = '<p>Comes to town on October 19th - 20th at Manhattan City Park.</p>';
+
+// ADMISSION COST
+$config['admission']['p'] = '<p><strong>Admission to this event is free!</strong></p>';
+
+
+/*** EXTERNAL RESOURCES ***/
+
+// PHOTO GALLERY
+$config['photos']['folder']['main']['id'] = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';		// Main GDrive Photo-Gallery Folder ID#
+$config['photos']['folder']['homepage']['id'] = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';	// Homepage Sub-Folder ID# (Best Photos)
 
 // FACEBOOK
 $config['facebook']['url'] = 'https://www.facebook.com/LittleAppleRenFest';
@@ -36,16 +54,9 @@ $config['facebook']['p'] = '<p>Find further details on Facebook at ' . $config['
 $config['photos']['wufoo']['contactus']['id'] = 'zdt3dk91fnpg50'; // Contact Us Form ID#
 
 // GOOGLE FORMS
-$config['google']['forms']['vendorapplication']['id'] = '1FAIpQLSem1CSeTHaGLiUwKE7hmeL0GIrjNtiD1qDhdtwMXB_XuQyUzQ'; // Vendor Application Form ID#
-
-// PHOTO GALLERY
-$config['photos']['folder']['main']['id'] = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';		// Main GDrive Photo-Gallery Folder ID#
-$config['photos']['folder']['homepage']['id'] = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';	// Homepage Sub-Folder ID# (Best Photos)
-
-// CALENDAR
-$config['calendar']['p'] = '<p>Comes to town on October 19th - 20th at Manhattan City Park.</p>';
-
-// ADMISSION COST
-$config['admission']['p'] = '<p><strong>Admission to this event is free!</strong></p>';
+$config['google']['forms']['vendorapplication']['id'] = '1FAIpQLSem1CSeTHaGLiUwKE7hmeL0GIrjNtiD1qDhdtwMXB_XuQyUzQ';	// Vendor Application Form ID#
+$config['google']['forms']['vendorapplication']['title'] = 'Vendor Application Form';
+$config['google']['forms']['contactus']['id'] = '1FAIpQLSeBmlJzKbP3UbBng-kyL5fahgr_RscfY-TTzblCM9-Vxin1mw';			// Contact Us Form ID#
+$config['google']['forms']['contactus']['title'] = 'Contact Us Form';
 
 ?>

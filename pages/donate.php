@@ -16,16 +16,17 @@
 
 <?php echo $config['html']['page-break']; ?>
 <p>
-	If you wish to sponsor us with a donation of money, please use the <a href="https://www.facebook.com/donate/2349758838577870/2377712119130474/" target=_blank>Facebook fundraiser</a> below.
+	If you wish to sponsor us with a donation of money, please use the <a href="https://www.facebook.com/donate/2349758838577870/2377712119130474/" target=_blank title="Donate to our Facebook Fundraiser">Facebook fundraiser</a> below.
 </p>
 <p>
-	<iframe id="fb-donate" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLittleAppleRenFest%2Fposts%2F2377712119130474&width=450" style="border:none;overflow:hidden;width:100%;height:610px;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+	<div style="position:relative; display:inline-block; width:450px; height:610px;">
+		<iframe id="fb-donate" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLittleAppleRenFest%2Fposts%2F2377712119130474&width=450" style="border:none;overflow:hidden;width:100%;height:100%;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+		<a class="fill-absolute" href="https://www.facebook.com/donate/2349758838577870/2377712119130474/" target=_blank title="Donate to our Facebook Fundraiser"></a>
+	</div>
 </p>
 
 <?php echo $config['html']['page-break']; ?>
 <p>
 	Otherwise, if you are interested in sponsoring us with a contribution of goods or services, please feel free to contact us using the form below.
 </p>
-<?php loadWufooForm($config['photos']['wufoo']['contactus']['id']); ?>
-
-<?php echo $config['contact']['p']; ?>
+<?php include("pages/contact.php"); ?>

@@ -10,7 +10,6 @@
 	</table>
 </p>
 <?php echo $config['admission']['p']; ?>
-
 <?php
 	loadPhotosGDrive(array(
 		$config['photos']['folder']['homepage']['id']	// Homepage Sub-Folder (Best Photos)
