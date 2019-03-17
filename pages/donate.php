@@ -19,7 +19,7 @@
 	If you wish to sponsor us with a donation of money, please use the <a href="https://www.facebook.com/donate/2349758838577870/2377712119130474/" target=_blank title="Donate to our Facebook Fundraiser">Facebook fundraiser</a> below.
 </p>
 <p>
-	<div style="position:relative; display:inline-block; width:100%; max-width:450px; height:610px;">
+	<div id="fb-donate-wrapper" style="position:relative; display:inline-block; width:100%; max-width:450px; height:610px;">
 		<iframe id="fb-donate" src="" style="border:none;overflow:hidden;width:100%;height:100%;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 		<a class="fill-absolute" href="https://www.facebook.com/donate/2349758838577870/2377712119130474/" target=_blank title="Donate to our Facebook Fundraiser"></a>
 	</div>
@@ -37,7 +37,7 @@
 			h = '610';
 		}
 		console.log('fb window w: ' + w + ', h: ' + h);
-		$('#fb-donate').css({'width': w + 'px', 'height': h + 'px'});
+		$('#fb-donate-wrapper').css({'width': w + 'px', 'height': h + 'px'});
 		$('#fb-donate').attr('src', url + w);
 	});
 	window.onload = pageLoad;
