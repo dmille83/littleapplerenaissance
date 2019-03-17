@@ -32,7 +32,7 @@
 		var w = 450;
 		var h = 610;
 		var cw = Math.round($('#content-container').width());
-		if (cw < 350) cw = 350;
+		//if (cw < 350) cw = 350;
 		if (cw < 450) w = cw;
 		console.log('fb window w: ' + w + ', h: ' + h);
 		$('#fb-donate-wrapper').css({'width': w + 'px', 'height': h + 'px'});
