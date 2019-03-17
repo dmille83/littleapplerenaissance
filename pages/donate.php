@@ -29,25 +29,25 @@
 	var pageLoad = (function(){
 		var url = 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLittleAppleRenFest%2Fposts%2F2377712119130474&width=';
 		// default is w: 350, h: 610
-		var cw = $('#content-container').width();
-		var w = '450';
-		var h = '610';
-		if (cw < 450) {
-			w = '350'
-			h = '610';
-		}
+		var w = 450;
+		var h = 610;
+		var cw = Math.round($('#content-container').width());
+		if (cw < 350) cw = 350;
+		if (cw < 450) w = cw;
 		console.log('fb window w: ' + w + ', h: ' + h);
 		$('#fb-donate-wrapper').css({'width': w + 'px', 'height': h + 'px'});
 		$('#fb-donate').attr('src', url + w);
 	});
 	window.onload = pageLoad;
-	$(window).on('resize', function() {
+	/*
+	window.onresize = (function() {
 		clearTimeout($.data(this, 'scrollTimer'));
 		$.data(this, 'scrollTimer', setTimeout(function() {
 			// do something
 			pageLoad();
 		}, 100));
 	});
+	*/
 </script>
 
 <?php echo $config['html']['page-break']; ?>
