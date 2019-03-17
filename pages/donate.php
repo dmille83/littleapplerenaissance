@@ -30,9 +30,9 @@
 		var url = 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FLittleAppleRenFest%2Fposts%2F2377712119130474&width=';
 		// default is w: 350, h: 610
 		var cw = $('#content-container').width();
-		w = '450';
+		var w = '450';
 		var h = '610';
-		if (w < 450) {
+		if (cw < 450) {
 			w = '350'
 			h = '610';
 		}
