@@ -19,18 +19,17 @@ if (!empty($_GET['action'])) {
 	$action = 'home';
 }
 $action = basename($action);
-if (file_exists("pages/$action.html")) {
-	include("pages/$action.html");
-} elseif (file_exists("pages/$action.php")) {
+if (file_exists("pages/$action.php")) {
 	include("pages/$action.php");
+} elseif (file_exists("pages/$action.html")) {
+	include("pages/$action.html");
 } else {
 	//echo("<p><br/>$action</p>"); // dangerous code insertion?
 	include("pages/404.html");
 }
 
 // Page View Counter
-//include("templates/countlog.php");
-include("templates/counter.html");
+include("templates/counter.php");
 
 // Page Footer
 include("templates/footer.php");

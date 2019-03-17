@@ -16,7 +16,7 @@
 	$timestamp = $date->format('ymdhis');
 	?>
 	
-	<title>Little Apple Renaissance Festival</title>
+	<title><?php echo $config['company']['name']; ?></title>
 	<link rel="shortcut icon" href="img/bookmark.ico">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +58,7 @@
 		<div>FAQ</div>
 		<!--<a href="faq">FAQ</a>-->
 		<a href="contact">Contact Us</a>
-		<a href="<?php echo $larf_facebook_url; ?>" target=_blank>Facebook</a>
+		<a href="<?php echo $config['facebook']['url']; ?>" target=_blank>Facebook</a>
 		
 	</div>
 	<a href="javascript:void(0);" class="nav-icon" onclick="navMenu()" title="menu">

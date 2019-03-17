@@ -2,26 +2,50 @@
 
 // GLOBAL SETTINGS USED IN MULTIPLE PLACES IN THE WEBSITE
 
+/**
+ *	CONFIG VAR INDEXING SCHEMA:
+ *	
+ *	INDEX	USAGE
+ *	--		--
+ *	name	raw text string
+ *	url		raw url string
+ *	a		hyperlink html element
+ *	p		paragraph html element
+ *	id		id# of an external resource, such as a form
+*/
+
 // HEADER H3 ELEMENT DEFAULT
-$larf_header_h='<h3>Little Apple Renaissance Festival</h3>';
+$config['company']['name'] = 'Little Apple Renaissance Festival';
+$config['company']['h'] = '<h3>' . $config['company']['name'] . '</h3>';
+
+// RECURRING HTML PAGE ELEMENTS
+$config['html']['page-break'] = '<div class="page-break"></div>';
 
 // CONTACT INFO
-$larf_phone_link='<a href="tel:+1-913-547-1653">(913) 547-1653</a>';
-$larf_email='littleapplerenfest@gmail.com';
-$larf_email_link='<a href="mailto:' . $larf_email . '">' . $larf_email . '</a>';
-$larf_contactinfo_p='
-	<div style="border-bottom: 1px solid #ccc;"></div>
-	<p>Questions? We may also be reached at ' . $larf_phone_link . ' or at ' . $larf_email_link . '</p>';
+$config['phone']['a'] = '<a href="tel:+1-913-547-1653">(913) 547-1653</a>';
+$config['email']['url'] = 'littleapplerenfest@gmail.com';
+$config['email']['a'] = '<a href="mailto:' . $config['email']['url'] . '">' . $config['email']['url'] . '</a>';
+$config['contact']['p'] = $config['html']['page-break'] . '<p>Questions? We may also be reached at ' . $config['phone']['a'] . ' or at ' . $config['email']['a'] . '</p>';
 
 // FACEBOOK
-$larf_facebook_url='https://www.facebook.com/LittleAppleRenFest';
-$larf_facebook_link='<a href="' . $larf_facebook_url . '" title="Facebook" target=_blank>facebook.com/LittleAppleRenFest</a>';
-$larf_facebook_p='<p>Find further details on Facebook at ' . $larf_facebook_link . '</p>';
+$config['facebook']['url'] = 'https://www.facebook.com/LittleAppleRenFest';
+$config['facebook']['a'] = '<a href="' . $config['facebook']['url'] . '" title="Facebook" target=_blank>facebook.com/LittleAppleRenFest</a>';
+$config['facebook']['p'] = '<p>Find further details on Facebook at ' . $config['facebook']['a'] . '</p>';
+
+// WUFOO
+$config['photos']['wufoo']['contactus']['id'] = 'zdt3dk91fnpg50'; // Contact Us Form ID#
+
+// GOOGLE FORMS
+$config['google']['forms']['vendorapplication']['id'] = '1FAIpQLSem1CSeTHaGLiUwKE7hmeL0GIrjNtiD1qDhdtwMXB_XuQyUzQ'; // Vendor Application Form ID#
+
+// PHOTO GALLERY
+$config['photos']['folder']['main']['id'] = '17n-iswLPlotLuCsP2t70a7KDK2Indi2m';		// Main GDrive Photo-Gallery Folder ID#
+$config['photos']['folder']['homepage']['id'] = '1XtoXy34BvHQZGtFGuC7QQARLcz27EIws';	// Homepage Sub-Folder ID# (Best Photos)
 
 // CALENDAR
-$larf_calendar_p='<p>Comes to town on October 19th - 20th at Manhattan City Park.</p>';
+$config['calendar']['p'] = '<p>Comes to town on October 19th - 20th at Manhattan City Park.</p>';
 
 // ADMISSION COST
-$larf_admission_p='<p><strong>Admission to this event is free!</strong></p>';
+$config['admission']['p'] = '<p><strong>Admission to this event is free!</strong></p>';
 
 ?>

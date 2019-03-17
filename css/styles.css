@@ -26,6 +26,10 @@ form table tr td {
 	text-align: left;
 }
 
+div.page-break, p.page-break {
+	border-bottom: 1px solid #ccc;
+}
+
 /*** PAGE LAYOUT ***/
 .col-container {
 	display: table;
