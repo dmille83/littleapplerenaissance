@@ -1,5 +1,5 @@
 <?php echo $config['company']['h']; ?>
-<p>Comes to town on October 19th - 20th at Manhattan City Park.</p>
+<?php echo $config['calendar']['p']; ?>
 <p>Find us on Facebook at <?php echo $config['facebook']['a']; ?></p>
 <p><strong>Join us in Revelry</strong></p>
 <p>
