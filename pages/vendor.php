@@ -7,5 +7,6 @@ loadGoogleForm($config['google']['forms']['vendorapplication']);
 //loadWufooForm($config['photos']['wufoo']['vendorapplication']);
 
 //echo $config['contact']['p'];
+//echo $config['html']['page-break'] . '<p>Questions? Please feel free to <a href="/contact">contact us</a> for more information.</p>';
 
 ?>
