@@ -55,6 +55,5 @@
 <div>&nbsp;</div>
 <?php echo $config['html']['page-break']; ?>
 <p>
-	Otherwise, if you are interested in sponsoring us with a contribution of goods or services, please feel free to contact us using the form below.
+	Otherwise, if you are interested in sponsoring us with a contribution of goods or services, please feel free to <a href="/contact">contact us</a>.
 </p>
-<?php include("pages/contact.php"); ?>

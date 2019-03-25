@@ -52,7 +52,7 @@
 		<div>Become Involved</div>
 		<a href="donate">Donate</a>
 		<a href="vendor">Become a Vendor</a>
-		<a href="donate">Become a Sponsor</a>
+		<a href="sponsor">Become a Sponsor</a>
 		<a href="volunteer">Volunteer at Event</a>
 		
 		<div>FAQ</div>
