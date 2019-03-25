@@ -66,5 +66,8 @@ $config['google']['forms']['vendorapplication']['height'] = '5000px';
 $config['google']['forms']['volunteer']['id'] = '1FAIpQLSdEWg2_CqBJDzTkdAoZvjvSTjQ5lz-1XKY5F67CGQAZqnss0Q';
 $config['google']['forms']['volunteer']['title'] = 'Volunteer Form';
 $config['google']['forms']['volunteer']['height'] = '1100px';
+$config['google']['forms']['sponsor']['id'] = '1FAIpQLSdqSKe3kcKZyXGI6FnZE_KtNFakEx3X0w1SAXWEVvoGIxwRww';
+$config['google']['forms']['sponsor']['title'] = 'Sponsor Form';
+$config['google']['forms']['sponsor']['height'] = '2000px';
 
 ?>
