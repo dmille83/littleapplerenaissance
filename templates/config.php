@@ -48,7 +48,7 @@ $config['photos']['folder']['homepage']['id'] = '1XtoXy34BvHQZGtFGuC7QQARLcz27EI
 // FACEBOOK
 $config['facebook']['url'] = 'https://www.facebook.com/LittleAppleRenFest';
 $config['facebook']['a'] = '<a href="' . $config['facebook']['url'] . '" title="Facebook" target=_blank>facebook.com/LittleAppleRenFest</a>';
-$config['facebook']['p'] = '<p>Find further details on Facebook at ' . $config['facebook']['a'] . '</p>';
+$config['facebook']['p'] = '<p>Find further details on Facebook at ' . $config['facebook']['a'] . ' or <a href="/contact">contact us</a>.</p>';
 
 // WUFOO
 $config['photos']['wufoo']['contactus']['id'] = 'zdt3dk91fnpg50';	// Contact Us Form ID#
