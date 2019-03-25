@@ -1,5 +1,3 @@
-<!--<h3>Volunteer at Event</h3>-->
-
 <?php 
 
 // GOOGLE FORM

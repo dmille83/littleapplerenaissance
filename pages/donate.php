@@ -1,4 +1,4 @@
-<?php echo $config['company']['h']; ?>
+<h3>Donate</h3>
 
 <p>
 	We are kindly asking our local community, our friends from the surrounding areas, and anyone who enjoys a good Renaissance Festival to help us raise money in order to continue to build a better Little Apple Renaissance Festival every year.

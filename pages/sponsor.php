@@ -1,4 +1,4 @@
-<?php echo $config['company']['h']; ?>
+<h3>Sponsor</h3>
 
 <p>
 	Sponsorship form under construction.

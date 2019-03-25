@@ -1,5 +1,5 @@
+<h3>Photo Gallery</h3>
 <?php
-	echo $config['company']['h'];
 	//echo '<div style="height:12px;"></div>';
 	loadPhotosGDrive(array(
 		 $config['photos']['folder']['homepage']['id']	// Homepage Sub-Folder (Best Photos)
