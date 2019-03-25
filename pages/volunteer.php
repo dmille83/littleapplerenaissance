@@ -1,3 +1,10 @@
-<h3>Volunteer at Event</h3>
+<!--<h3>Volunteer at Event</h3>-->
 
-<?php include("pages/contact.php"); ?>
+<?php 
+
+// GOOGLE FORM
+loadGoogleForm($config['google']['forms']['volunteer']);
+
+echo $config['contact']['p'];
+
+?>
