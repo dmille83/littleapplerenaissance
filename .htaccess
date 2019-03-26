@@ -61,6 +61,10 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
   
+  # Redirect from http to https
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(cart/|checkout/) https://%{HTTP_HOST}%{REQUEST_URI}
+  
   # Redirect to pass sub-pages as an action parameter
   RewriteRule ^/?([a-zA-Z0-9_-]+)$ index.php?action=$1
   
