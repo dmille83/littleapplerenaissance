@@ -29,7 +29,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css?v=<?php echo $timestamp; ?>">
 	<script src="/js/swipe.js?v=<?php echo $timestamp; ?>"></script>
-	<script src="/js/main.js?v=<?php echo $timestamp; ?>"></script>
+	<script src="/js/photos.js?v=<?php echo $timestamp; ?>"></script>
+	<script src="/js/navigation.js?v=<?php echo $timestamp; ?>"></script>
 	
 </head>
 <body>

@@ -1,15 +1,6 @@
 var arr_photos = [];
 var arr_photos_idx = null;
 
-function navMenu(c) {
-	var x = document.getElementById("nav-menu");
-	if (x.style.display === "table-cell" || c === true) {
-		x.style.display = "";
-	} else {
-		x.style.display = "table-cell";
-	}
-}
-
 window.onload = (function(){
 	
 	/*
