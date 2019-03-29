@@ -66,10 +66,10 @@ DirectoryIndex index.php index.html index.htm
   RewriteRule ^(cart/|checkout/) https://%{HTTP_HOST}%{REQUEST_URI}
   
   # Redirect to pass sub-pages as an action parameter
-  RewriteRule ^/?([a-zA-Z0-9_-]+)$ index.php?action=$1
+  RewriteRule ^/?([a-zA-Z0-9_-]+)$ index.php?page=$1
   
   # Redirect attempts to access sub-folders
-  RewriteRule ^/?([a-zA-Z_]+)/$ index.php?action=404
+  RewriteRule ^/?([a-zA-Z_]+)/$ index.php?page=404
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
@@ -130,8 +130,8 @@ DirectoryIndex index.php index.html index.htm
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
   #RewriteRule ^ index.php [L]
-  #RewriteRule ^ 404page.html [L]
-  RewriteRule ^ index.php?action=404 [L]
+  RewriteRule ^ 404page.html [L]
+  #RewriteRule ^ index.php?page=404 [L]
   
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.

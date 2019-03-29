@@ -16,18 +16,18 @@ include("templates/forms-wufoo.php");
 include("templates/header.php");
 
 // Load Current Page
-if (!empty($_GET['action'])) {
-	$action = $_GET['action'];
+if (!empty($_GET['page'])) {
+	$page = $_GET['page'];
 } else {
-	$action = 'home';
+	$page = 'home';
 }
-$action = basename($action);
-if (file_exists("pages/$action.php")) {
-	include("pages/$action.php");
-} elseif (file_exists("pages/$action.html")) {
-	include("pages/$action.html");
+$page = basename($page);
+if (file_exists("pages/$page.php")) {
+	include("pages/$page.php");
+} elseif (file_exists("pages/$page.html")) {
+	include("pages/$page.html");
 } else {
-	//echo("<p><br/>$action</p>"); // dangerous code insertion?
+	//echo("<p><br/>$page</p>"); // dangerous code insertion?
 	include("pages/404.html");
 }
 
